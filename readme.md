@@ -1,3 +1,5 @@
+<div align="center"><img src="https://user-images.githubusercontent.com/87153934/127405638-73787833-5dbf-4e68-8d5c-cd8f6d591deb.png" width="400"></div>
+
 # ✨ Libreria y Papeleria Punta de Lapiz ✨
 #### Empresa dedicada a la venta de insumos de libreria y papeleria.
 Venta al publico en general y grandes ofertas a instituciones, empresas y revendedores.
