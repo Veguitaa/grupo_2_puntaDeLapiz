@@ -6,7 +6,7 @@ Venta al publico en general y grandes ofertas a instituciones, empresas y revend
 
 ***
 #### Integrantes del equipo:
-- Caceres Jenni:
+- Hola mi nombre es Jennifer Caceres, tengo 18 años, soy estudiante de ingenieria y actualmente me intereso mucho la informatica y es lo que quiero implementar en un futuro a mi carrera, espero poder seguir haciendo lo que me gusta que es la programacion.
 
 - Hola mi nombre es Melisa Marques, tengo 25 años, soy enfermera profesional, actualmente decidi cambiar de carrera por completo y volcarme en la tecnologia que es lo que siemrpe me gusto y actualmente estoy realizando un curso para formarme como fullstack, espero a futuro poder seguir capacitandome para seguir complementando lo actual y poder llegar a dedicarme el dia de mañana a esto.
 
