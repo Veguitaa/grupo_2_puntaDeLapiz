@@ -10,7 +10,8 @@ Venta al publico en general y grandes ofertas a instituciones, empresas y revend
 
 - Hola mi nombre es Melisa Marques, tengo 25 años, soy enfermera profesional, actualmente decidi cambiar de carrera por completo y volcarme en la tecnologia que es lo que siemrpe me gusto y actualmente estoy realizando un curso para formarme como fullstack, espero a futuro poder seguir capacitandome para seguir complementando lo actual y poder llegar a dedicarme el dia de mañana a esto.
 
-- Soy José Talavera, tengo 33 años actualmente  estoy cursando full stak web atraves de una fundación llamada Formar y respaldada por Digital Hause, me gusta el mundo del programa y lo relacionado a la tecnología, poner en práctica a trabajar en equipo y obtener objetivos propuestos con dedicación y esfuerzo.
+- Soy Juan Pablo, tengo 31 años y soy de Córdoba. Desde pequeño soy un aficionado por el ajedrez y las matemáticas. Actualmente estudio en Digital House para ser Programador Web FullStack. Mi sueño es conseguir mi primer empleo en este maravilloso mundo.
+
 
 - Hola!! mi nombre es Angel  Vega, tengo 31 años, soy tecnico en informatica, y actualmente me encuentro realizando un curso para formarme como fullstack, inclinadome más por la parte el front, espero a futuro poder capacitarme en diseño ux/ui para complementar el mundo de la programacion y diseño que es lo que me gusta.
 
