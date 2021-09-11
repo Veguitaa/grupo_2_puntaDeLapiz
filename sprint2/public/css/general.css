@@ -3,3 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* font-family: 'Roboto', sans-serif; */ 
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+:root{
+--rosa:#fca2b2;
+--celeste: #c0fbfb; 
+--gris: #d1cccc;
+--negro: black; 
+--blanco: white;
+}
