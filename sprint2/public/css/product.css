@@ -1,0 +1,347 @@
+/* 
+*********************************************************
+HEADER
+*********************************************************
+*/
+
+.product header{
+    display: flex;
+    flex-direction: column;
+    background-color:var(--rosa);
+    padding-top:10px;
+    padding-bottom: 15px;
+}
+.product header .superior{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;;
+ }
+ 
+ .product header .menu{
+     font-size: 23px;;
+ }
+
+ .product header div div .logo{
+    width:90px;
+    height: 90px; 
+    box-shadow: 1px 0px 6px rgb(1 1 1);
+    border-radius: 50px;
+}
+   
+ 
+ 
+.product  header .iconos{
+     width:50px;
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .product header .iconos a{
+    color: var(--negro);
+}
+
+.product header div  .busqueda-header{
+    position:relative;
+}
+.product header div  .busqueda-header  div .busqueda{
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: center; 
+    margin:auto;   
+}
+.product header div .busqueda-header i{
+    position: absolute;
+    top: 17%;
+    right: 7%;
+    font-size: 14px;
+    color: #7e7a7a;
+}
+
+.product header .iconos .mi-carrito{
+    display: none;
+}
+.product header .iconos .ingreso{
+    display: none;
+}
+
+.product header div .categorias h3{
+    display: none;
+}
+
+.product header div .categorias-items h3{
+    display: none;
+}
+
+/* 
+*********************************************************
+MAIN
+*********************************************************
+*/
+
+.product main{
+    padding-top: 10px;
+    background-color:var(--celeste)	;  
+}
+
+article.producto{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: var(--blanco);
+    margin: 10px auto;;
+    padding: 10px;
+    border-radius: 10px;
+}
+article.producto img{
+    width: 60%;
+    margin: 0px auto;
+}
+article.producto p{
+    width: 80%;
+    margin: 0 auto;
+}
+article.producto div.agregar{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+article.producto div.agregar p{
+    font-weight: 900;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+article.producto div a.more{
+    width: 100%;
+    background-color: var(--rosa);
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+article.producto p.precio{
+    color: var(--rosa);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+article.producto p.diseños{
+    color: var(--gris);
+    margin-bottom: 5px;
+}
+
+
+article.products{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 10px auto;;
+    padding: 10px;
+}
+
+article.products img{
+    width: 100%;
+}
+article.products h3{
+    color: var(--rosa);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+article.products p.precio{
+    color: var(--rosa);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+article.products a.more{
+    background-color: var(--rosa);
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product main section{
+    display: flex;
+    justify-content: space-between;
+}
+.product main h3.tambien{
+    font-size: 16px;
+    width: 70%;
+    color: var(--rosa);
+    text-align: center;
+    margin: 0 auto;
+}
+div.detalle h3{
+    display: none;
+}
+
+
+/* 
+*********************************************************
+FOOTER
+*********************************************************
+*/
+
+.product footer{
+   /*  height: 185px; */
+    background-color: var(--rosa);
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product footer .logo-footer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+.product footer .logo-footer img{
+    width: 80%;
+    margin-top: 5px;
+}
+.product footer p{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    border-top: 1px solid var(--negro);
+}
+
+.product footer .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product footer .info .nosotros{
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    
+}
+.product footer .info h2{
+    width: 75%;
+    font-size: 14px;
+    color:var(--blanco)
+}
+
+
+@media(min-width: 481px){
+    /* Header */
+    .product header .categorias{
+        display: inline;
+    }
+    .product header .categorias-items{
+        display: inline;
+    }
+    .product header div div .logo {
+        width: 50px;
+        height: 50px;
+        box-shadow: 1px 0px 6px rgb(1 1 1);
+        border-radius: 50px;
+        margin-left: -80%;
+    }
+
+    .product header div .busqueda-header div .busqueda {
+        width: 50%;
+        margin-top: -51px;
+        padding: 5px;
+        margin-left: 17%;
+    }
+
+    .product header div  .busqueda-header{
+        position: relative;
+    }
+
+    .product header div .busqueda-header i {
+        position: absolute;
+        font-size: 18px;
+        right: 35%;
+    }
+
+    .product header .iconos .icono-carrito{
+        margin-left: 156px;
+        
+    }
+    .product header .iconos{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .product header .iconos a{
+       color: var(--negro);
+   }
+   .product header .iconos .mi-carrito{
+       display: flex;
+   }
+   .product header .iconos .ingreso{
+       display: flex;
+   }
+
+   /* Main */
+   main section article.producto{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 95%;
+   }
+   article.producto img{
+       width: 30%;
+       margin: 0;
+   }
+   div.detalle{
+       width: 70%;
+   }
+   div.detalle h3{
+       display: block; 
+       color: var(--rosa);
+       width: 80%;
+       margin: 0 auto;
+       margin-top: 20px;
+   }
+   div.detalle p{
+       margin-top: 10px;
+   }
+   div.detalle p.precio{
+       margin-top: 20px;
+   }
+   div.detalle p.diseños{
+       margin-top: 20px;
+   }
+   article.producto div.agregar{
+       margin-top: 30px;
+   }
+}
+
+
+@media(min-width: 769px){
+    main section article.producto{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 95%;
+   }
+   article.producto img{
+       width: 30%;
+       margin: 0;
+   }
+   div.detalle{
+       width: 70%;
+       display: flex;
+       flex-wrap: wrap;
+   }
+   article.producto div.agregar{
+       align-items: center;
+   } 
+}
