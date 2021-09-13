@@ -4,75 +4,7 @@ HEADER
 *********************************************************
 */
 
-.login header{
-    display: flex;
-    flex-direction: column;
-    background-color:var(--rosa);
-    padding-top:10px;
-    padding-bottom: 15px;
-}
-.login header .superior{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 10px;;
- }
- 
- .login header .menu{
-     font-size: 23px;;
- }
 
- .login header div div .logo{
-    width:90px;
-    height: 90px; 
-    box-shadow: 1px 0px 6px rgb(1 1 1);
-    border-radius: 50px;
-}
-   
- 
- 
-.login  header .iconos{
-     width:50px;
-     display: flex;
-     justify-content: space-around;
- }
- 
- .login header .iconos a{
-    color: var(--negro);
-}
-
-.login header div  .busqueda-header{
-    position:relative;
-}
-.login header div  .busqueda-header  div .busqueda{
-    border-radius: 10px;
-    width: 90%;
-    display: flex;
-    justify-content: center; 
-    margin:auto;   
-}
-.login header div .busqueda-header i{
-    position: absolute;
-    top: 17%;
-    right: 7%;
-    font-size: 14px;
-    color: #7e7a7a;
-}
-
-.login header .iconos .mi-carrito{
-    display: none;
-}
-.login header .iconos .ingreso{
-    display: none;
-}
-
-.login header div .categorias h3{
-    display: none;
-}
-
-.login header div .categorias-items h3{
-    display: none;
-}
 /* 
 *********************************************************
 MAIN
@@ -86,40 +18,63 @@ MAIN
 .login main h4{
     text-align: center;
     padding: 10px  ;
+    text-shadow: 2px -1px 2px var(--rosa);
 }
 .login main .container {
     height: 192px;
-    width: 90%;
+    width: 81%;
     background-color: var(--blanco);
     border-radius: 10px;
     margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
 }
 
-.login main .container div .ingreso{
+.login main .container  .ingreso1{
     background-color: var(--rosa);
     width: 80%;
     padding: 4px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 18px 10px -4px 26px;
-}
-.login main .container input{
-    margin: 21px 30px;
-}
-.login main .container p{
-    margin: -36px 0px 0px 57px;
+    border: solid 1px var(--negro);
 }
 
-.login main .container .bottom{
-    height: 25px;
-    width: 79px;
+.login main .container  .ingreso2{
     background-color: var(--rosa);
-    border-radius: 10px;
-    margin: 14px 0px 0px 28px;
+    width: 80%;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 18px 10px -4px 26px;
+    border: solid 1px var(--negro);
 }
+.login main .container .checkbox{
+     display: flex;
+    flex-direction: row;
+    padding-top: 16px
+}
+.login main .container input{
+  padding-right: 3px;
+   
+}
+.login main .container p{
+  
+    
+}
+
+
 .login main .container .bottom a{
-    color: var(--blanco);
-    margin: 9px;
-    font-size: 19px;
+    display: inline-block;
+    border-radius: 4px;
+    width: 118px;
+    padding: 5px;
+    margin: 8px 26px;
+    background-color: var(--rosa);
+    color: var(--negro);
+    text-align: center;
+    font-weight: 1000;
+    border: solid 1px var(--negro);
 }
 
 /* 
@@ -152,6 +107,7 @@ FOOTER
      margin: 0 auto;
      padding-bottom: 5px;
      border-top: 1px solid var(--negro);
+     
  }
  
  .login footer .info {
@@ -173,4 +129,56 @@ FOOTER
      font-size: 14px;
      color:var(--blanco)
  }
- 
+ /* 
+*******************************************
+MEDIA QUERIS
+********************************************
+ */
+ @media(min-width: 481px){
+    
+    
+    /* MAIN */
+    .login main {
+        height: 323px;
+        
+    }
+
+    .login main h4 {
+        padding-top: 39px;
+    }
+    .login main .container {
+        height: 192px;
+        width: 51%;
+        margin: 0 auto;
+    }
+    .login main .container div .ingreso1{
+        margin-top: 27px;
+    }
+
+ }
+
+ @media(min-width:1280px){
+        /* MAIN */
+        .login main {
+            height: 380px;
+        }
+        .login main h4 {
+            padding-top: 39px;
+        }
+        .login main .container {
+            height: 232px;
+            width: 51%;
+            margin: 0 auto;
+        }
+    .login main .container div .ingreso1{
+        margin-top: 48px;
+        width: 84%;
+    }
+    .login main .container div .ingreso2 {
+        
+        width: 84%;
+        padding: 4px;
+        border-radius: 10px;
+        margin: 18px 10px -4px 26px;
+    }
+}
