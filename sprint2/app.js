@@ -10,6 +10,7 @@ app.get('/producto',(req,res) => res.sendFile(path.join(__dirname,'views','produ
 app.get('/carrito',(req,res) => res.sendFile(path.join(__dirname,'views','cart.html')))
 app.get('/login',(req,res) => res.sendFile(path.join(__dirname,'views','login.html')))
 app.get('/register',(req,res) => res.sendFile(path.join(__dirname,'views','register.html')))
+app.get('/header',(req,res) => res.sendFile(path.join(__dirname,'views','header.html')))
 
 
 app.listen(port,() => console.log('Servidor funcionando en el puerto ' + port))
