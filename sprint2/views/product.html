@@ -6,53 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descripción del producto</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 <body class="product">
-    <header>
-        <div>
-            <div class="superior">
-                <div class="menu">
-                    <div class="burguer-menu">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-
-                <div class="logo">
-                    <img width=100% src="/img/Logo.png" alt="logo">
-                </div>
-
-                <div class="iconos">
-                    <div class="icono-carrito">
-                        <a href="/product"><i class="fas fa-shopping-cart"></i></a>  
-                    </div>
-                    <div>
-                        <h5 class="mi-carrito">  Mi carrito</h5> 
-                    </div>  
-                   <div class="icono-loguin">
-                        <a href="/logeo"><i class="fas fa-user-plus"></i></a>
-                   </div >
-                    <div>
-                        <h5 class="ingreso">  Ingreso</h5>
-                    </div>
-                </div>
+ <header>
+    <div class="logo">
+        <img src="/img/Logo.png" alt="logo" />
+    </div>
+        <nav class="iconos">
+            <div class="content">
+                <a href="/product"><i class="fas fa-shopping-cart"></i></a>
+                <p>Mi carrito</p>
+                <a href=""><h5>items 0</h5></a>
             </div>
-            <div class= "busqueda-header">
-               <div >
-                    <input  class="busqueda" type="text" placeholder="¿Qué estás buscando?">
-               </div>
-               <i class="fas fa-search"></i>
+            <div class="content">
+                <a href="/logeo"><i class="fas fa-user-plus"></i></a>
+                <p>Ingreso</p>
+                <a href=""><h5>¿No tienes cuenta?</h5></a>
             </div>
-            <div class="categorias">
-                <h3>CATEGORÍAS</h3>
+        </nav>
+        <form>
+            <input class="busqueda" type="text" placeholder="¿Qué estás buscando?" />
+            <i class="fas fa-search"></i>
+        </form>   
+        <div class="menu">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
             </div>
-            <div class="categorias-items"> 
-                <h3>Instituciones</h3>
-                <h3>Empresas</h3>
-                <h3>Revendedores</h3>
-            </div>
+            <nav class="menu-desplegable">
+                <ul>
+                    <li><a href="">Instituciones</a></li>
+                    <li><a href="">Empresas</a></li>
+                    <li><a href="">Revendedores</a></li>
+                </ul>
+            </nav>
         </div>
-    </header>
-
+    </div>
+</header>
     <main>
 
         <section>
@@ -70,38 +60,68 @@
                 
                 <div class="agregar">
                     <p> - 1 +</p>
-                    <a class="more" href="">AGREGAR</a>
+                    <a href="#">
+                        <button class="button-agregar" >AGREGAR</button>
+                    </a> 
                 </div>
             </div>
             </article>
         </section>
 
-        <h3 class="tambien">TAMBIEN TE PUEDE INTERESAR</h3>
-    <section>
-        <article class="products">
-            <img width= 33% src="/img/bic-cristalup.jpg" alt="">
-            <h3>Bic</h3>
-            <p>
-                Boligrafo Bic Up
-                Fashion + 8 clásicos
-                colores surtidos.
-            </p>
-            <p class="precio">$582</p>
-            <a class="more" href="">AGREGAR</a>
-        </article>
-
-        <article class="products">
-            <img width= 33% src="/img/bic-cristalup.jpg" alt="">
-            <h3>Bic</h3>
-            <p>
-                Boligrafo Bic Up
-                Fashion + 8 clásicos
-                colores surtidos.
-            </p>
-            <p class="precio">$582</p>
-            <a class="more" href="">AGREGAR</a>
-        </article>
-    </section>
+        <h4 class="tambien">TAMBIEN TE PUEDE INTERESAR</h4>
+        <section class="section-products">
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+            </article>
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+            </article>
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+            </article>
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+                </section>
 
     </main>
 

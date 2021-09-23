@@ -6,8 +6,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="cart">
+    <header>
+        <div class="logo">
+            <img src="/img/Logo.png" alt="logo" />
+        </div>
+            <nav class="iconos">
+                <div class="content">
+                    <a href="/product"><i class="fas fa-shopping-cart"></i></a>
+                    <p>Mi carrito</p>
+                    <a href=""><h5>items 0</h5></a>
+                </div>
+                <div class="content">
+                    <a href="/logeo"><i class="fas fa-user-plus"></i></a>
+                    <p>Ingreso</p>
+                    <a href=""><h5>¿No tienes cuenta?</h5></a>
+                </div>
+            </nav>
+            <form>
+                <input class="busqueda" type="text" placeholder="¿Qué estás buscando?" />
+                <i class="fas fa-search"></i>
+            </form>   
+            <div class="menu">
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="menu-desplegable">
+                    <ul>
+                        <li><a href="">Instituciones</a></li>
+                        <li><a href="">Empresas</a></li>
+                        <li><a href="">Revendedores</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+        <main>
+            <section class="section-cart">
+            <article class="article-cart" >
+                <section class="section-table">
+                    <table class="cart">
+                    <thead>
+                    <tr>
+                    <th class="first">Producto</th>
+        
+                    <th class="second">Precio</th>
+                    <th class="third">Cantidad</th>
+                    <th class="fourth">Subtotal</th>
+                    <th class="fifth"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                
+                    <tr class="productitm">
+                    
+                    <td><img src="/img/bic-cristalup.jpg"></td>
+
+                    <td>$825</td>
+                    <td><a href="#" >-</a><input type="numeric" value="1" min="0" max="99" class="qtyinput"><a href="#" >+</a></td>
+                    <td>$825</td>
+                    <td class="td-six"><button class="remove">x</button></td>
+                    </tr>
+                    </table>
+                </section>
+            </article>
     
+            <article class="article-totals" >
+                <section class="section-totals">
+                    <div class="totals">
+                    <div class="title-totals"><p>Resumen de compra</p></div>
+    
+                    <div class="promoCode">
+                      <label class="label-codigo" for="promo">Si tienes un codigo de descuento ingresalo aqui...</label>
+                      <input class="input-codigo" type="text" name="promo" placeholder="Codigo de descuento">
+                      <a href="#" class="btn-ok">OK</a>
+                    </div>
+                    <div class="totals-money"> 
+                    <div class="subtotal-price">
+                      <label>Subtotal</label>
+                      <div class="totals-value" id="cart-subtotal">$825</div>
+                    </div>
+                  
+                    <div class="totals-envio">
+                      <label label>Costo de envio</label>
+                      <div class="totals-value" id="cart-shipping">$25</div>
+                    </div>
+          
+                    <div class="totals-item">
+                    <label>Total</label>
+                    <div class="totals-value" id="cart-total">$850</div>
+                    </div>
+                    </div>
+                    <div class="div-checkout">
+                      <button class="checkout">Iniciar compra</button>
+                      <div><a href="#">Seguir comprando</a></div>
+                  </div>   
+                    </div>
+                </section>
+            </article>
+        </section>
+    
+          <h4 class="h4-cart" >completa tu compra</h4>
+
+          <section class="section-products">
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+            </article>
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+            </article>
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+            </article>
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+                </section>
+
+        <footer>
+            <div class="logo-footer">
+                <img src="/img/Logo.png" alt="logo">
+            </div>
+            <div class="info">
+                <h2 class="nosotros">NOSOTROS</h2>
+                <h2 class="nosotros">SERVICIOS</h2>
+                <h2>CONTACTOS</h2>
+            </div>
+            <p>Todos los derechos reservados 2021</p>
+        </footer>
+    </main>
 </body>
 </html>

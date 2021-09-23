@@ -3,18 +3,22 @@ header{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 20px;
     background-color: var(--rosa);
     padding-top: 13px;
+    max-width: 1300px;
+    padding-bottom: 20px;
+   
 }
 
 header .logo{
     width: 20%;
+    
 }
 header nav.iconos{
     display: flex;
     justify-content: space-between;
     width:60px;
+   
 }
 header nav.iconos i{
     color: var(--negro);
@@ -22,6 +26,7 @@ header nav.iconos i{
 
 header nav.iconos p{
     display: none;
+  
 }
 header nav.iconos h5{
     display: none;
@@ -29,12 +34,13 @@ header nav.iconos h5{
 
 header .logo img{
     width: 100%;
-    border-radius: 70px;
+    border-radius: 100px;
     box-shadow: 1px 0px 6px rgb(1 1 1);   
 }
 header form{
     width: 80%;
     margin : 0 auto;
+    
     
 }
 header form input{
@@ -43,6 +49,7 @@ header form input{
     padding: 1px;
     margin-top: 16px;
     position: relative;
+    
 }
 
 header form i{
@@ -59,10 +66,12 @@ header nav.iconos h5{
 }
 header nav.menu-desplegable{
     display: none;
+    
 }
 header .menu{
     order:-1;
     font-size: 20px;
+    
 }
 
 @media(min-width: 481px){
@@ -98,7 +107,7 @@ header .menu{
         display: none;
     }
     header nav.menu-desplegable{
-        display: contents;        
+        display: contents;      
     }
     header nav.menu-desplegable ul{
         width: 100%;
@@ -115,28 +124,33 @@ header .menu{
     }
 }
 
+
+
+
 @media(min-width: 769px){
-    header{ 
+   /*  header{ 
         max-height: 200px;
-   }
+    
+        
+   } */
    header .logo{
     width: 160px;
-}
-header nav.iconos{
+    }
+    header nav.iconos{
    width: 230px;
-}
-header .menu{
+    }
+    header .menu{
     width: 80%;
-}
-header form{
+    }
+    header form{
     width: 380px;
-}
-header form input{
+    }
+    header form input{
     padding: 4px;
     position: relative;
-}
+    }
 
-header form i{
+    header form i{
     position: absolute;
     right: 35%;
     font-size: 11px;
