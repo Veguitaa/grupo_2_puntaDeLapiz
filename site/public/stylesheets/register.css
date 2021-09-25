@@ -1,0 +1,66 @@
+
+
+/* 
+*********************************************************
+MAIN
+*********************************************************
+*/
+.register main{
+    background-color: var(--celeste);
+    height: 350px;
+
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.register main .container{
+    align-content: center;
+    height: 310px;
+    width: 70%;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.register main .container input{
+    border-radius: 4px;
+    background-color: var(--rosa);
+    color: var(--negro);
+    width: 70%;
+    max-width:350px;
+    padding: 2px;
+    margin-bottom: 3px;
+    border: solid 1px var(--negro);
+}
+.register main .container div{
+    display: flex;
+    
+}
+.register main .container div p{
+    font-size: 8px;
+}
+
+.register .container .bottom{
+    border-radius: 6px;
+    width: 118px;
+    padding: 3px;
+    border: solid 1px var(--negro);
+    background-color: var(--rosa);
+    
+    text-align: center;
+    font-weight: 1000;
+}
+
+.register .container .bottom a{
+    text-decoration: none;
+    margin-left: 28px;
+    color: var(--negro);
+}

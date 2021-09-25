@@ -1,0 +1,180 @@
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--rosa);
+    padding-top: 13px;
+    padding-bottom: 20px;
+   
+}
+
+header .logo{
+    width: 20%;
+    
+}
+header nav.iconos{
+    display: flex;
+    justify-content: space-between;
+    width:60px;
+   
+}
+
+header nav.iconos i{
+    color: var(--negro);
+}
+
+header nav.iconos p{
+    display: none;
+  
+}
+header nav.iconos h5{
+    display: none;
+}
+
+header .logo img{
+    width: 100%;
+    border-radius: 100px;
+    box-shadow: 1px 0px 6px rgb(1 1 1);   
+}
+header form{
+    width: 80%;
+    margin : 0 auto;
+    position: relative;
+    display: flex;
+}
+header form input{
+    width: 100%;
+    border-radius: 7px;
+    padding: 1px;
+    margin-top: 16px;
+    position: relative;
+    
+}
+
+header form i{
+   
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: var(--negro);
+    padding-top: 21px;
+}
+    
+
+
+header nav.iconos h5{
+    display: none;
+}
+header nav.menu-desplegable{
+    display: none;
+    
+}
+header .menu{
+    order:-1;
+    font-size: 20px;
+    
+}
+
+
+@media(min-width: 481px){
+    
+    header .logo{
+        order: 1;
+    }
+    header nav.iconos{
+        order: 3;
+    }
+    header form{
+        order: 2;
+        width: 50%;
+        margin: 0;
+    }
+    header form input{
+        padding: 3px;
+        position: relative;
+    }
+    
+    header form i{
+        position: absolute;
+        color: var(--negro);
+        padding-top: 22px;
+    }
+    header .menu{
+        order: 4;
+        width: 50%;
+    }
+    header .menu .burger-menu{
+        display: none;
+    }
+    header nav.menu-desplegable{
+        display: contents;      
+    }
+    header nav.menu-desplegable ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    header nav.menu-desplegable ul li{
+        margin: 0 20px;
+        
+    }
+    header nav.menu-desplegable ul li a{
+        color: var(--negro);
+    }
+}
+
+
+
+
+@media(min-width: 769px){
+   /*  header{ 
+        max-height: 200px;
+    
+        
+   } */
+   header .logo{
+    width: 160px;
+    }
+    header nav.iconos{
+   width: 230px;
+    }
+    header .menu{
+    width: 80%;
+    }
+    header form{
+    width: 380px;
+    }
+    header form input{
+    padding: 4px;
+    position: relative;
+    }
+
+    header form i{
+    position: absolute;
+    color: var(--negro);
+    padding-top: 22px;
+}
+header nav.iconos p{
+    display: contents;
+    
+}
+header nav.iconos h5{
+    display: contents;
+    color:var(--negro);
+    font-size: 13px;
+    font-style:inherit;
+}
+
+}
+@media(min-width: 1280px){
+
+}
+
+
+
+
+
+
+
