@@ -43,7 +43,7 @@ header form{
     position: relative;
     display: flex;
 }
-header form input{
+header form input {
     width: 100%;
     border-radius: 7px;
     padding: 1px;

@@ -1,0 +1,45 @@
+.adminInfo{
+
+    display: flex;
+    padding: 50px;
+    
+
+}
+
+.articleAdminUser{
+    width: 20%;
+    text-align: center;
+}
+.articleAdminUser img{
+    border-radius: 150px;
+    width: 200px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.itemDescription li{
+    margin: 10px 0px;
+}
+
+.articleAdminInfo{
+    width: 80%;
+    padding-left: 20%;
+    padding-top: 50px;
+
+}
+
+@media(max-width: 600px){
+    .adminInfo{
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    .userNameInfo{
+        text-align: center;
+    }
+    
+  }
+
+
+
+
+

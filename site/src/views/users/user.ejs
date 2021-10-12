@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./../partials/head') %>
+<body>
+    <%- include('./../partials/headerAdmin') %>
+
+    <main class="mainAdmin">
+
+
+        <H4>MI INFORMACIÓN</H4>
+      
+
+        <section class="adminInfo">
+        <article class="articleAdminUser">
+        <img src="/img/usersimg/<%= userData.avatar %> " alt="imagen producto">
+        <h2 class="userNameInfo"><%= userData.user_name %> </h2>
+        </article>
+
+        <article class="articleAdminInfo">
+            
+                <ul class="itemDescription">
+                    <li>Nombre: <%= userData.first_name %></li>
+                    <li>Apellido: <%= userData.last_name %></li>
+                    <li>Email: <%= userData.email %></li>
+                    <li>Direccion: <%= userData.address %></li>
+                </ul>
+                <button>EDITAR INFORMACIÓN</button>
+                <a href="/admin">
+                    <button>EDITAR PRODUCTOS</button>
+                </a>
+
+        </article>
+    </section>
+
+    <H4>MIS PRODUCTOS</H4>
+    
+        <section class="section-products">
+            
+            <% products.map (product => { %>
+            <article class="products">
+                <img class="cart-products" src="/img/productsimg/<%= product.image %> " alt="imagen producto">
+                <h3><%= product.mark %></h3>
+                <p>
+                    <%= product.name %> 
+                </p>
+                <a href="/product/<%= product.id %> ">
+                    <button class="button-agregar" >DETALLE</button>
+                </a> 
+            </article>
+            <% }) %>
+            </section>
+    
+ 
+    </main>
+</body>
+</html>

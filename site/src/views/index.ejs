@@ -60,8 +60,26 @@
             </div>   
         </section>
         <h4>Productos destacados</h4> 
+
+        
+
         <section class="section-products">
+            <% products.map (product => { %>
+                <% if(product.category === "libreria"){%>
             <article class="products">
+                <img class="cart-products" src="/img/productsimg/<%= product.image %> " alt="imagen producto">
+                <h3><%= product.mark %></h3>
+                <p>
+                    <%= product.name %> 
+                </p>
+                <p class="precio">$ <%= product.price %></p>
+                <a href="/product/<%= product.id %> ">
+                    <button class="button-agregar" >VER MÁS...</button>
+                </a> 
+            </article>
+            <% } %>
+			<% }) %>
+            <!-- <article class="products">
                 <img width= 33% src="/img/bic-cristalup.jpg" alt="">
                 <h3>Bic</h3>
                 <p>
@@ -98,20 +116,7 @@
                 <p class="precio">$582</p>
                 <a href="#">
                     <button class="button-agregar" >AGREGAR</button>
-                </a> 
-            </article>
-            <article class="products">
-                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
-                <h3>Bic</h3>
-                <p>
-                    Boligrafo Bic Up
-                    Fashion + 8 clásicos
-                    colores surtidos.
-                </p>
-                <p class="precio">$582</p>
-                <a href="#">
-                    <button class="button-agregar" >AGREGAR</button>
-                </a> 
+                </a>  -->
 
         </section>
         

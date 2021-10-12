@@ -19,6 +19,10 @@ a{
     text-decoration: none;
 }
 
+body{
+    background: white;
+    padding: 0px 20px;
+}
 
 /* variables colores */
 
@@ -44,15 +48,22 @@ h4{
 /* Productos */
 
 .section-products{
-    /* background-color: var(--celeste); */
     display: flex;
     padding: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
+    font-size: 1rem;
    }
- 
+
+.section-products p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
    .cart-products img{
-    width: 33%;
+    width: 400px;
    }
 
 
@@ -68,6 +79,8 @@ h4{
     border-radius: 25px;
     border: none;
     margin: 10px ;
+    width: 80%;
+    font-size: 80%;
    }
  
 /* CODIGO HTML PARA BOTON AGREGAR */
