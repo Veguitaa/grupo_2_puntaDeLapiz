@@ -10,21 +10,60 @@
     <main>
         <h4>registro de usuario</h4>
         <div class="container">
-            <input type="text" placeholder="Nombre de usuario">
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Apellido">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Dirección">
-            <input type="text" placeholder="Contraseña">
-            <input type="text" placeholder="Repetir contraseña">
+
+            <form action="/users/register" method="POST"   >
+
+
+                <div class="input">
+                    <label for="user_name"></label>
+                    <input type="text" name="user_name" id="user_name" class=<%= locals.errors && errors.user_name ? 'danger' : 'data' %> placeholder="Nombre de usuario" value=<%= locals.old && old.user_name ? old.user_name : null %>>
+                    <% if(locals.errors && errors.user_name) { %> 
+                        <small> <%= errors.user_name.msg %> </small>
+                    <% } %> 
+                </div>
+
+
+                
+
+
+                <div class="input">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Email"  value=<%= locals.old && old.email ? old.email : null %>>
+                    <% if(locals.errors && errors.email) { %> 
+                        <small> <%= errors.email.msg %> </small>
+                    <% } %> 
+                </div>
+
+
+
+                <div class="input">
+                    <label for="password1"></label>
+                    <input type="password" name="password1" id="password1" placeholder="Contraseña">
+                    <% if(locals.errors && errors.password1) { %> 
+                        <small> <%= errors.password1.msg %> </small>
+                    <% } %> 
+                </div>
+
+
+                <div class="input">
+                    <label for="password2"></label>
+                    <input type="password" name="password2" id="password2" placeholder="Repetir Contraseña">
+                </div>
+
+
             <div >
-                <input type="checkbox">
-                <p>Estoy de acuerdo con los terminos y condiciones</p>
-            </div>
-            <div class="bottom">
-                <a  href="">Registrarse</a>
+                <input type="checkbox" name="terminos" id="terminos">
+                <label for="terminos">Terminos y condiciones</label>
             </div>
 
+            
+            <div class="submit">
+                <button type="submit">Registrarme</button>
+                <!-- <input type="submit" value="Registrarse" /> -->
+                <!-- <a href="/users/register"></a> -->
+              </div>
+
+            </form>
         </div>
     </main>
     

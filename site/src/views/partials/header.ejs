@@ -14,9 +14,14 @@
             </div>
 
             <div class="content">
-                <a href="/logeo"><i class="fas fa-user-plus"></i></a>
-                <p>Ingreso</p>
-                <a href="/users/user/1"><h5>admin provisorio</h5></a>
+                <ul class="user">
+                    <% if (!(locals.user)) {%> 
+                        <li><a href="/users/login">Login</a></li>
+                        <li><a href="/users/register">Registro</a></li>
+                        <% } else { %> 
+                            <li><form action="/users/logout" method="GET"> <button type="submit"> Cerrar sesión</button> </form></li>
+                            <% } %> 
+                </ul>
             </div>
         </nav>
 

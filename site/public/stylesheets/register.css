@@ -7,8 +7,7 @@ MAIN
 */
 .register main{
     background-color: var(--celeste);
-    height: 350px;
-
+  
     display: flex;
     justify-content: center ;
     align-items: center;
@@ -16,29 +15,37 @@ MAIN
     padding-bottom: 20px;
 }
 .register main .container{
-    align-content: center;
-    height: 310px;
-    width: 70%;
+    /* align-content: center; */
+    /* height: 310px; */
+    width: 80%;
     background-color: var(--blanco);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 30px 0px;
+   /*  padding-left: 10px; */
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
 }
 
-.register main .container input{
+
+
+.input{
     border-radius: 4px;
     background-color: var(--rosa);
     color: var(--negro);
-    width: 70%;
-    max-width:350px;
-    padding: 2px;
-    margin-bottom: 3px;
+   /*  width: 100%; */
+    /* max-width:350px; */
+    padding: 5px;
+    margin-bottom: 15px;
     border: solid 1px var(--negro);
+}
+
+.input input{
+    background-color: var(--rosa);
+    border: 0;
 }
 .register main .container div{
     display: flex;
@@ -57,6 +64,7 @@ MAIN
     
     text-align: center;
     font-weight: 1000;
+    margin-top: 10px;
 }
 
 .register .container .bottom a{
