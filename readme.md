@@ -8,7 +8,7 @@ Venta al publico en general y grandes ofertas a instituciones, empresas y revend
 
 #### Integrantes del equipo:
 
-- Hola me llamo Francisco Bulgarelli, tengo 27 años y vivo en Buenos Aires, actualmente me encuentro estudiando la tecnicatura en informatica en la Universidad Nacional General Sarmiento y a su vez estoy realizando un curso en la academia DigitalHouse para convertirme en desarrollador web fullstack. Mi sueño es convertirme en programador y conseguir mi primer empleo en el mundo IT.
+- Hola mi nombre es Francisco Bulgarelli, tengo 27 años y estoy cursando la tecnicatura en programacion en la Universidad General Sarmiento. Actualmente estoy estudiando en DigitalHouse para ser desarrollador web fullstack, mi objetivo es recibirme como programador y trabajar en el mundo IT.
 
 
 - Soy Juan Pablo, tengo 31 años y soy de Córdoba. Desde pequeño soy un aficionado por el ajedrez y las matemáticas. Actualmente estudio en Digital House para ser Programador Web FullStack. Mi sueño es conseguir mi primer empleo en este maravilloso mundo.
