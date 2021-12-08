@@ -5,10 +5,11 @@
 Venta al publico en general y grandes ofertas a instituciones, empresas y revendedores.
 
 ***
-#### Integrantes del equipo:
-- Hola mi nombre es Jennifer Caceres, tengo 18 años, soy estudiante de ingenieria y actualmente me intereso mucho la informatica y es lo que quiero implementar en un futuro a mi carrera, espero poder seguir haciendo lo que me gusta que es la programacion.
 
-- Hola mi nombre es Melisa Marques, tengo 25 años, soy enfermera profesional, actualmente decidi cambiar de carrera por completo y volcarme en la tecnologia que es lo que siemrpe me gusto y actualmente estoy realizando un curso para formarme como fullstack, espero a futuro poder seguir capacitandome para seguir complementando lo actual y poder llegar a dedicarme el dia de mañana a esto.
+#### Integrantes del equipo:
+
+- Hola me llamo Francisco Bulgarelli, tengo 27 años y vivo en Buenos Aires, actualmente me encuentro estudiando la tecnicatura en informatica en la Universidad Nacional General Sarmiento y a su vez estoy realizando un curso en la academia DigitalHouse para convertirme en desarrollador web fullstack. Mi sueño es convertirme en programador y conseguir mi primer empleo en el mundo IT.
+
 
 - Soy Juan Pablo, tengo 31 años y soy de Córdoba. Desde pequeño soy un aficionado por el ajedrez y las matemáticas. Actualmente estudio en Digital House para ser Programador Web FullStack. Mi sueño es conseguir mi primer empleo en este maravilloso mundo.
 
@@ -16,6 +17,7 @@ Venta al publico en general y grandes ofertas a instituciones, empresas y revend
 - Hola!! mi nombre es Angel  Vega, tengo 31 años, soy tecnico en informatica, y actualmente me encuentro realizando un curso para formarme como fullstack, inclinadome más por la parte el front, espero a futuro poder capacitarme en diseño ux/ui para complementar el mundo de la programacion y diseño que es lo que me gusta.
 
 ***
+
 #### Paginas de referencia:
 
 - [Persa](https://libreriapersa.com/ "Persa"): Inspiración del tema elegido.
