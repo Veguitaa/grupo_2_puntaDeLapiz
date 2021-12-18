@@ -11,29 +11,57 @@
         <h4>registro de usuario</h4>
         <div class="container">
 
-            <form action="/users/register" method="POST"   >
+            <form action="" method="POST" enctype="multipart/form-data"   >
+
+                <div class="input">
+                    <label for="imagen"></label>
+                    <input type="file" name="imagen" id="imagen">
+                </div>
 
 
                 <div class="input">
-                    <label for="user_name"></label>
-                    <input type="text" name="user_name" id="user_name" class=<%= locals.errors && errors.user_name ? 'danger' : 'data' %> placeholder="Nombre de usuario" value=<%= locals.old && old.user_name ? old.user_name : null %>>
-                    <% if(locals.errors && errors.user_name) { %> 
-                        <small> <%= errors.user_name.msg %> </small>
+                    <label for="nombre"></label>
+                    <input type="text" name="nombre" id="nombre" class=<%= locals.errors && errors.nombre ? 'danger' : 'data' %> placeholder="Nombre de usuario" value=<%= locals.old && old.nombre ? old.nombre : null %>>
+                    <% if(locals.errors && errors.nombre) { %> 
+                        <small> <%= errors.nombre.msg %> </small>
                     <% } %> 
                 </div>
 
 
-                
+                <div class="input">
+                    <label for="apellido"></label>
+                    <input type="text" name="apellido" id="apellido" class=<%= locals.errors && errors.user_apellido ? 'danger' : 'data' %> placeholder="Apellido de usuario" value=<%= locals.old && old.user_apellido ? old.user_apellido : null %>>
+                    <% if(locals.errors && errors.user_apellido) { %> 
+                        <small> <%= errors.user_apellido.msg %> </small>
+                    <% } %> 
+                </div>
 
 
                 <div class="input">
                     <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Email"  value=<%= locals.old && old.email ? old.email : null %>>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su email"  value=<%= locals.old && old.email ? old.email : null %>>
                     <% if(locals.errors && errors.email) { %> 
                         <small> <%= errors.email.msg %> </small>
                     <% } %> 
                 </div>
 
+
+                <div class="input">
+                    <label for="direccion"></label>
+                    <input type="text" name="direccion" id="direccion" class=<%= locals.errors && errors.user_direccion ? 'danger' : 'data' %> placeholder="Direccion de usuario" value=<%= locals.old && old.user_direccion ? old.user_direccion : null %>>
+                    <% if(locals.errors && errors.user_direccion) { %> 
+                        <small> <%= errors.user_direccion.msg %> </small>
+                    <% } %> 
+                </div>
+
+
+                <div class="input">
+                    <label for="usuario"></label>
+                    <input type="text" name="usuario" id="usuario" class=<%= locals.errors && errors.usuario ? 'danger' : 'data' %> placeholder="Ingrese su nombre de usuario" value=<%= locals.old && old.usuario ? old.usuario : null %>>
+                    <% if(locals.errors && errors.usuario) { %> 
+                        <small> <%= errors.usuario.msg %> </small>
+                    <% } %> 
+                </div>
 
 
                 <div class="input">

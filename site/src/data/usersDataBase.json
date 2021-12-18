@@ -16,5 +16,19 @@
     "first_name": "completar datos para realizar compras",
     "password1": "$2a$10$ZpR.qSe9blC1G5I6JYrSWuExQw3er7b1skimSrax4I5vL3XuBXRD2",
     "avatar": "default-image.png"
+  },
+  {
+    "id": 3,
+    "email": "asd@gmail.com",
+    "first_name": "completar datos para realizar compras",
+    "password1": "$2a$10$qL1yIrPtKT37Io5sxgK15edVOQm0yE6rtkpBnmht/5EAkc0FFBMVy",
+    "avatar": "img-phone-1639776025317.jpg"
+  },
+  {
+    "id": 4,
+    "email": "asd@gmail.com",
+    "first_name": "completar datos para realizar compras",
+    "password1": "$2a$10$ithA3./X44e2sxX9lgmtxuLjcXjxs/KnS8qm7HdzI11ttm2/zK79C",
+    "avatar": "img-phone-1639776052603.jpg"
   }
 ]

@@ -9,28 +9,35 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       marca: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       precio: {
-        type: Sequelize.DECIMAL(10,2)
+        type: Sequelize.DECIMAL(10,2),
+        allowNull: false
       },
       stock: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: true
       },
       imagen: {
         type: Sequelize.STRING
       },
       descuento: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: true
       },
       descripcion: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(500),
+        allowNull: false
       },
       categoriaId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references:{
           model:{
             tableName:"Categorias"
