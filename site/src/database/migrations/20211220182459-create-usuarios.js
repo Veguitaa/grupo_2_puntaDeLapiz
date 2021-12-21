@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Productos', {
+    await queryInterface.createTable('Usuarios', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -12,37 +12,38 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      marca: {
+      apellido: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      precio: {
-        type: Sequelize.DECIMAL(10,2),
+      email: {
+        type: Sequelize.STRING,
         allowNull: false
       },
-      stock: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-      },
-      imagen: {
-        type: Sequelize.STRING
-      },
-      descuento: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-      },
-      descripcion: {
-        type: Sequelize.STRING(500),
+      contraseña: {
+        type: Sequelize.STRING,
         allowNull: false
       },
-      categoriaId: {
+      direccion: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      usuario: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      avatar: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      rolId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
           model:{
-            tableName:"Categorias"
+            tableName:'Rols'
           },
-          key:"id"
+          key:'id'
         }
       },
       createdAt: {
@@ -56,6 +57,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Productos');
+    await queryInterface.dropTable('Usuarios');
   }
 };

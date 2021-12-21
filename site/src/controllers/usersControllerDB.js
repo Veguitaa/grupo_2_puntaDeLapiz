@@ -45,7 +45,7 @@ module.exports = {
 
             const {nombre, apellido, email, password1, direccion, usuario} = req.body
             
-            db.Usuario.create({
+            db.Usuarios.create({
                 nombre,
                 apellido,
                 email,
