@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('./partials/head') %>
+
+<body class="product">
+
+    <%- include('./partials/header') %> 
+
+    <main>
+
+        <section>
+            <article class="producto">
+                <img class="cart-products" src="/img/productsimg/<%= productDetail.image %> " alt="imagen producto">
+                <div class="detalle">
+                <h3><%= productDetail.mark %></h3>
+                <p>
+                    <%= productDetail.name %>
+                </p>
+                <p class="precio">$ <%= productDetail.price %></p>
+                <p class="diseños"><%= productDetail.description %></p>
+                
+                <div class="agregar">
+                    <p> - 1 +</p>
+                    <a href="#">
+                        <button class="button-agregar" >AGREGAR</button>
+                    </a> 
+                </div>
+            </div>
+            </article>
+        </section>
+
+        <h4 class="tambien">TAMBIEN TE PUEDE INTERESAR</h4>
+        <section class="section-products">
+            <% products.map (product => { %>
+                <% if(product.category === "libreria"){%>
+            <article class="products">
+                <img class="cart-products" src="/img/productsimg/<%= product.image %> " alt="imagen producto">
+                <h3><%= product.mark %></h3>
+                <p>
+                    <%= product.name %> 
+                </p>
+                <p class="precio">$ <%= product.price %></p>
+                <a href="/product/<%= product.id %> ">
+                    <button class="button-agregar" >VER MÁS...</button>
+                </a> 
+            </article>
+            <% } %>
+			<% }) %>
+      
+    </main>
+
+    <%- include('./partials/footer') %> 
+    
+</body>
+</html>

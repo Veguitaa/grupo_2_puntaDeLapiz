@@ -2,7 +2,9 @@
 
 SEGUIR HACIENDO:
 -ayudarnos entre todos con las dudas que se surjan
--constante comuicacion
+-constante comunicacion
+-poner horarios de reuinion
+-ponerse al dia con la cursada
 
 HACER MAS:
 -llevar a cabo mas reuniones
@@ -15,9 +17,8 @@ HACER MENOS:
 
 EMPEZAR A HACER:
 -poner fechas de vencimiento a las etiquetas de trello
--ponerse al dia con la cursada
--poner horarios de reuinion
 -avisarnos cuando hacemos cambios en vs
+-darle mas importancia a los temas principales
 
 DEJAR DE HACER:
 -dejar tareas a ultimo momento

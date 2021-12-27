@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <%- include('./../partials/head') %>
+
+<body class="login">
+
+    <%- include('./../partials/header') %>
+  
+<main>
+
+    <h4>Iniciar sesión</h4>
+
+    <div class="container">
+        <form action="/users/login" method="POST">
+            <div>
+                <label for="email"></label>
+                <input class="ingreso2" type="email" name="email" id="email" placeholder="Email">
+            </div>
+            
+            <div>
+                <label for="password1"></label>
+                <input class="ingreso2" type="password" name="password1" id="password1" placeholder="Contraseña">
+            </div>
+
+            <div class=checkbox>
+                
+                <input  type="checkbox" name="Recordarme" >
+                <label for="Recordarme">Recordarme</label>
+            </div>
+            <% if (locals.errors && errors.msg) { %> 
+                <small> <%= errors.msg %>  </small>
+                <% } %> 
+
+
+            <div>
+                <button class="bottom" type="submit">Ingresar</button>
+            </div>
+            
+        </form>
+
+    </div>
+  
+</main>
+
+    <%- include('./../partials/footer') %>
+
+</body>
+</html>

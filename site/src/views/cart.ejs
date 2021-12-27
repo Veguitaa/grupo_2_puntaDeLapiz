@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+<body class="cart">
+
+    <%- include('./partials/header') %> 
+
+        <main>
+            <section class="section-cart">
+            <article class="article-cart" >
+                <section class="section-table">
+                    <table class="cart">
+                    <thead>
+                    <tr>
+                    <th class="first">Producto</th>
+        
+                    <th class="second">Precio</th>
+                    <th class="third">Cantidad</th>
+                    <th class="fourth">Subtotal</th>
+                    <th class="fifth"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                
+                    <tr class="productitm">
+                    
+                    <td><img src="/img/bic-cristalup.jpg"></td>
+
+                    <td>$825</td>
+                    <td><a href="#" >-</a><input type="numeric" value="1" min="0" max="99" class="qtyinput"><a href="#" >+</a></td>
+                    <td>$825</td>
+                    <td class="td-six"><button class="remove">x</button></td>
+                    </tr>
+                    </table>
+                </section>
+            </article>
+    
+            <article class="article-totals" >
+                <section class="section-totals">
+                    <div class="totals">
+                    <div class="title-totals"><p>Resumen de compra</p></div>
+    
+                    <div class="promoCode">
+                      <label class="label-codigo" for="promo">Si tienes un codigo de descuento ingresalo aqui...</label>
+                      <input class="input-codigo" type="text" name="promo" placeholder="Codigo de descuento">
+                      <a href="#" class="btn-ok">OK</a>
+                    </div>
+                    <div class="totals-money"> 
+                    <div class="subtotal-price">
+                      <label>Subtotal</label>
+                      <div class="totals-value" id="cart-subtotal">$825</div>
+                    </div>
+                  
+                    <div class="totals-envio">
+                      <label label>Costo de envio</label>
+                      <div class="totals-value" id="cart-shipping">$25</div>
+                    </div>
+          
+                    <div class="totals-item">
+                    <label>Total</label>
+                    <div class="totals-value" id="cart-total">$850</div>
+                    </div>
+                    </div>
+                    <div class="div-checkout">
+                      <button class="checkout">Iniciar compra</button>
+                      <div><a href="#">Seguir comprando</a></div>
+                  </div>   
+                    </div>
+                </section>
+            </article>
+        </section>
+    
+          <h4 class="h4-cart" >completa tu compra</h4>
+
+          <section class="section-products">
+            <section class="section-products">
+                <% products.map (product => { %>
+                    <% if(product.category === "libreria"){%>
+                <article class="products">
+                    <img class="cart-products" src="/img/productsimg/<%= product.image %> " alt="imagen producto">
+                    <h3><%= product.mark %></h3>
+                    <p>
+                        <%= product.name %> 
+                    </p>
+                    <p class="precio">$ <%= product.price %></p>
+                    <a href="#">
+                        <button class="button-agregar" >AGREGAR</button>
+                    </a> 
+                </article>
+                <% } %>
+                <% }) %>
+                </section>
+    </main>
+
+    <%- include('./partials/footer') %> 
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<%- include('../partials/head') %>
+<body >
+<%- include('../partials/headerAdmin') %>
+
+
+<main class="mainNewProduct">
+
+	<div class="containerNewProduct">
+		<p class="titleNewProduct">NUEVO PRODUCTO</p>
+	
+		<form  action="/admin" method="POST" enctype="multipart/form-data">
+
+		  <div class="nameNewProduct">
+			<label for="name" class="labelNewProduct"> Nombre del producto: </label>
+			<input class="inputNewProduct" type="text" id="name" name="name" placeholder="Por ej: lapiceras trazo fino" required>
+		  </div>
+
+		  <div class="markNewProduct">
+			<label for="mark" class="labelNewProduct" >Marca:</label>
+			<input class="inputNewProduct" type="text" placeholder="Por Ej: Bic" name="mark" id="mark" required>
+		  </div>
+
+		  <div class="categoryNewProduct">
+			<label for="category" class="labelNewProduct" >Categoria: </label>
+			<select name="category" id="category" >
+			  <option disabled hidden selected>Elegir</option>
+			  <option value="Libreria">Libreria</option>
+			  <option value="Papeleria">Papeleria</option>
+			  <option value="Oficina">Oficina</option>
+			  <option value="Estudiante">Estudiante</option>
+			</select>
+		  </div>
+
+		  <div class="precioNewProduct">
+			<label for="price" class="labelNewProduct" > Precio:</label>
+			<input  class="inputNewProduct" type="text" id="price" name="price" placeholder="Por Ej: 50" >
+		  </div>
+
+		  <div class="stockNewProduct">
+			<label for="stock" class="labelNewProduct" >Stock:</label>
+			<input class="inputNewProduct" type="text" id="stock" name="stock" placeholder="Por Ej: 10" >
+		  </div>
+
+		  <div class="discountNewProduct">
+			<label for="discount" class="labelNewProduct">Descuento:</label>
+			<input class="inputNewProduct" type="text" id="discount" name="discount" placeholder="Por Ej: 15" >
+		  </div>
+
+		  <div class="imageNewProduct">
+			<label for="image">imagen del producto</label>
+			<input type="file" name="image" id="image" >
+		</div>
+
+		 
+
+		  <div class="descriptionNewProduct">
+			<label for="description"></label>
+			<textarea name="description" placeholder="Descripción del producto" id="description"  rows="5" required></textarea>
+		  </div>
+
+
+		  <div class="submit">
+			<input type="submit" value="Crear producto" class="buttomNewProduct"/>
+		  </div>
+
+		</form>
+	  </div>
+
+
+
+
+  
+</main>
+
+
+</body>

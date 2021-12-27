@@ -1,0 +1,50 @@
+<header>
+
+    <div class="logo">
+        <a href="/">
+        <img src="/img/Logo.png" alt="logo" />
+        </a>
+    </div >
+
+        <nav class="iconos">
+            <div class="content">
+                <a href="/product"><i class="fas fa-shopping-cart"></i></a>
+                <p>Mi carrito</p>
+                <a href=""><h5>items 0</h5></a>
+            </div>
+
+            <div class="content">
+                <ul class="user">
+                    <% if (!(locals.user)) {%> 
+                        <li><a href="/users/login">Login</a></li>
+                        <li><a href="/users/register">Registro</a></li>
+                        <% } else { %> 
+                            <li><form action="/users/logout" method="GET"> <button type="submit"> Cerrar sesión</button> </form></li>
+                            <% } %> 
+                </ul>
+            </div>
+        </nav>
+
+        <form>
+            <input class="busqueda" type="text" placeholder="¿Qué estás buscando?" />
+            <i class="fas fa-search"></i>
+        </form> 
+
+        <div class="menu">
+
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="menu-desplegable">
+                <ul>
+                    <li><a href="">Instituciones</a></li>
+                    <li><a href="">Empresas</a></li>
+                    <li><a href="">Revendedores</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+</header>

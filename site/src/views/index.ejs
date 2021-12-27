@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <%- include('./partials/head') %> 
+
+<body class="home">
+
+    <%- include('./partials/header') %> 
+   
+    <main>
+        
+        <article class="articulo">
+
+            <div class="services">
+                
+                <div class="item">
+                    <div class="icono">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Envios a todo el país</h4>
+                    <p >Llegamos a todos los rincones del pais.</p>
+                </div>
+               
+                <div class="item">
+                    <div class="icono">
+                        <i class="far fa-credit-card"></i>
+                   </div>
+                    <h4>Facilidades de pago</h4>
+                    <p >Recibimos todos los medios de pago.</p> 
+                </div>
+               
+                <div class="item">
+                    <div class="icono">
+                        <i class="fas fa-award"></i>
+                   </div>
+                    <h4>Precios Premium</h4>
+                    <p >Precios especiales a instituciones, empresas y revendores.</p>   
+               
+                </div>
+               
+                <div class="item">
+                    <div class="icono">
+                        <i class="fas fa-award"></i>
+                   </div>
+                    <h4>Seguimiento de pedido</h4>
+                    <p>En el despacho de todos nuestros paquetes</p>
+                </div>
+            </div>
+        </article>
+
+        <section class="marcas">
+                       <div class="container-marcas">
+                <img width=100% src="img/logo-rivadavia.jpg" alt="Rivadavia">
+            </div>
+            <div class="container-marcas">
+                <img width=100% src="img/logo-bic.jpg" alt="Bic">
+            </div>
+            <div class="container-marcas">
+                <img width=100% src="img/logo-fabercastell.png" alt="FaberCastell">
+            </div>   
+        </section>
+        <h4>Productos destacados</h4> 
+
+        
+
+        <section class="section-products">
+            <% products.map (product => { %>
+                <% if(product.category === "libreria"){%>
+            <article class="products">
+                <img class="cart-products" src="/img/productsimg/<%= product.image %> " alt="imagen producto">
+                <h3><%= product.mark %></h3>
+                <p>
+                    <%= product.name %> 
+                </p>
+                <p class="precio">$ <%= product.price %></p>
+                <a href="/product/<%= product.id %> ">
+                    <button class="button-agregar" >VER MÁS...</button>
+                </a> 
+            </article>
+            <% } %>
+			<% }) %>
+            <!-- <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+            </article>
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a> 
+            </article>
+            <article class="products">
+                <img width= 33% src="/img/bic-cristalup.jpg" alt="">
+                <h3>Bic</h3>
+                <p>
+                    Boligrafo Bic Up
+                    Fashion + 8 clásicos
+                    colores surtidos.
+                </p>
+                <p class="precio">$582</p>
+                <a href="#">
+                    <button class="button-agregar" >AGREGAR</button>
+                </a>  -->
+
+        </section>
+        
+        <div class="banner">
+            <img src="/img/booksale.png" alt="booksale">
+        </div>
+
+        <section class="lugares">
+            <div>
+                <img   src="/img/oficina.jpg" alt="Oficina">
+                <a href="">Empresas</a>
+            </div>
+            <div>
+                <img  src="/img/escuela.jpg" alt="Escuela">
+                <a href="">Instituciones</a>
+            </div>
+            <div>
+                <img src="/img/libreria.jpg" alt="Librería">
+                <a href="">Revendores</a>
+            </div>
+            <div>
+                <img  src="/img/estudiouniversitario.jpg" alt="Universidad">
+                <a href="">Universitario</a>
+            </div>
+           
+            <div class="lugares-tablet">
+                <img src="/img/libreria.jpg" alt="Librería">
+                <a href="">Revendores</a>
+            </div>
+            <div class="lugares-tablet"> 
+                <img  src="/img/estudiouniversitario.jpg" alt="Universidad">
+                <a href="">Universitario</a>
+            </div>
+        </section>
+   
+    </main>
+
+    <%- include('./partials/footer') %> 
+
+</body>
+
+</html>

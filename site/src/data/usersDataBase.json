@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "user_name": "Veguitaa",
+    "first_name": "Angel",
+    "last_name": "Vega",
+    "email": "webav2020@gmail.com",
+    "address": "La Rioja, La Rioja, Olsacher 1600",
+    "password1": "bzEW4TQ",
+    "avatar": "angel_vega.jpg"
+  },
+  {
+    "id": 2,
+    "user_name": "angelito",
+    "email": "anshelitov@gmail.com",
+    "first_name": "completar datos para realizar compras",
+    "password1": "$2a$10$ZpR.qSe9blC1G5I6JYrSWuExQw3er7b1skimSrax4I5vL3XuBXRD2",
+    "avatar": "default-image.png"
+  }
+]

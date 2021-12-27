@@ -1,0 +1,214 @@
+.mainNewProduct{
+    background-color: var(--celeste);
+    padding: 100px 25% ;
+}
+
+
+/* input {
+  line-height: normal;
+} */
+
+/* textarea {
+  overflow: auto;
+}
+ */
+ 
+.containerNewProduct{
+background-color: white;
+  border: solid 3px var(--rosaD);
+  max-width: 768px;
+  position: relative;
+}
+
+.containerNewProduct form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+.titleNewProduct {
+    padding-top: 10px;
+  color: var(--rosaD);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px -1px 2px black;
+}
+
+
+
+
+/* modificacion labels */
+
+
+.labelNewProduct{
+  font-size: 150%;
+}
+
+
+.nameNewProduct {
+	width: 100%;
+}
+
+.markNewProduct {
+	float: left;
+	width: 45%;
+}
+
+
+.categoryNewProduct {
+    float: right;
+    width: 45%;
+  }
+
+.precioNewProduct {
+    float: left;
+    width: 45%;
+}
+
+.stockNewProduct{
+    float: right;
+      width: 45%; 
+}
+
+.discountNewProduct{
+    width: 45%;
+}
+
+.imageNewProduct{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptionNewProduct {
+	float: none;
+    margin-top: 20px;
+}
+
+  
+
+
+
+.inputNewProduct, select {
+	background: none;
+  border: none;
+	border-bottom: solid 2px var(--rosaD);
+	color: #474544;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+  padding-top: 15px;
+	width: 100%;
+}
+
+.descriptionNewProduct textarea {
+	background: none;
+  border: solid 2px var(--rosaD);
+	border-bottom: solid 2px var(--rosaD);
+	color: #474544;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+	/* padding: 0 0 0.875em 0; */
+  padding: 10px;
+	width: 100%;
+}
+
+
+
+.inputNewProduct:focus, textarea:focus {
+	outline: none;
+	padding: 0 0 0.875em 0;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+
+textarea {
+	/* line-height: 150%;
+	height: 150px; */
+	resize: none;
+    /* width: 100%; */
+}
+
+/* ::-webkit-input-placeholder {
+	color: #474544;
+}
+
+:-moz-placeholder { 
+	color: #474544;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #474544;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #474544;
+} */
+
+.buttomNewProduct {
+  background: none;
+  border: solid 2px var(--rosaD);
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.buttomNewProduct:hover {
+  background: var(--rosaD);
+  color: white;
+}
+
+@media /* screen & */ (max-width: 768px) {
+    .containerNewProduct {
+    margin: 20px auto;
+    width: 95%;
+  }
+}
+
+@media /* screen and */ (max-width: 480px) {
+.titleNewProduct {
+    font-size: 26px;
+  }
+  
+  .buttomNewProduct {
+    padding: 15px 25px;
+  }
+}
+
+@media /* screen and  */(max-width: 420px) {
+    .titleNewProduct {
+    font-size: 18px;
+  }
+
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
+}

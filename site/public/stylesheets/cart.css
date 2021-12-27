@@ -1,0 +1,164 @@
+
+
+/*************************************************************************
+********************************* CARRITO *********************************
+***************************************************************************/
+.cart main{
+  padding-top: 10px;
+  background-color:var(--celeste)	;  
+}
+.section-cart{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+  }
+  
+  img{
+    width: 80px;
+  }
+  
+.article-cart{
+  background: white;
+  padding: 10px 0;
+  border-radius: 10px;
+  margin-top: 20px;
+  }
+
+.article-totals{
+  width: 100%;
+  background: white;
+  padding: 10px 0;
+  border-radius: 10px;
+  margin-top: 20px;
+
+}
+
+  .section-table{
+    display: flex;
+    justify-content: center ;
+    
+  }
+  
+  table thead tr th{
+   padding-bottom: 5px;
+   border-bottom: 1px solid black ;
+   width: 90%;
+  }
+  .cart thead th.first {
+  width: 175px;
+  }
+
+  .cart thead th.second {
+  width: 45px;
+  }
+  .cart thead th.third {
+  width: 230px;
+  }
+  .cart thead th.fourth {
+  width: 130px;
+  }
+  .cart thead th.fifth {
+  width: 20px;
+  }
+  
+  .cart tbody td {
+  text-align: center;
+  padding-top: 10px;
+  }
+  
+  .qtyinput {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #a3b8d3;
+  text-align: center;
+  margin: 0px 2px;
+  }
+  
+  .remove {
+  position: relative;
+  right: 12px;
+  color: var(--rosaD);
+  border: none;
+  font-size: 1rem;;
+  background-color: rgba(255, 248, 220, 0);
+  }
+  
+  .totals{
+   padding: 0px 10px;
+  }
+  
+  .title-totals{
+   border-bottom: 1px solid black;
+  }
+  
+  .label-codigo{
+   display: none;
+  }
+  
+  .promoCode{
+   display: flex;
+   padding: 10px 0px;
+   justify-content: flex-end;
+   border-bottom: 1px solid black;
+  }
+  
+  .btn-ok{
+   background-color: var(--rosaD);
+   color: white;
+   margin-left: 5px;
+   padding: 5px;
+   border-radius: 5px;
+   
+  }
+  .totals-money{
+   padding: 5px 0px;
+  }
+  
+  .subtotal-price, .totals-envio, .totals-item{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 3px;
+   
+  }
+  
+  .div-checkout{
+   padding: 10px 0px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   text-align: center;
+   display: block;
+  }
+  
+  .checkout{
+   background-color: var(--rosaD);
+   color: white;
+   padding: 10px 25px;
+   border-radius: 5px;
+   border: none;
+   margin-bottom: 10px;
+  }
+
+  
+/*************************************************************************
+***************************** OTRAS COMPRAS ******************************
+**************************************************************************/
+
+ 
+ @media(min-width: 760px){
+
+  .section-cart{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+ 
+  .article-cart {
+    width: 65%;
+  }
+
+  .article-totals{
+    width: 34%;
+  }
+}
+
+

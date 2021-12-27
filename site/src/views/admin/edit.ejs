@@ -1,0 +1,69 @@
+<%- include('../partials/head') %>
+<body >
+<%- include('../partials/headerAdmin') %>
+
+
+<main class="mainNewProduct">
+
+	<div class="containerNewProduct">
+		<p class="titleNewProduct">EDICION DE PRODUCTO</p>
+	
+		
+		<form  action="/admin/edit/<%= product.id %>?_method=PUT" method="POST" >
+
+		  <div class="nameNewProduct">
+			<label for="name" class="labelNewProduct">Nombre del producto: </label>
+			<input class="inputNewProduct" type="text" id="name" name="name" value="<%= product.name %>" required>
+		  </div>
+
+		  <div class="markNewProduct">
+			<label for="mark" class="labelNewProduct">Marca:</label>
+			<input class="inputNewProduct" type="text" value="<%= product.mark %>" name="mark" id="mark" required>
+		  </div>
+
+		  <div class="categoryNewProduct">
+			<label for="category" class="labelNewProduct">Categoria: </label>
+			<select name="category" id="category" >
+			  <option disabled hidden selected>Elegir</option>
+			  <option value="Libreria">Libreria</option>
+			  <option value="Papeleria">Papeleria</option>
+			  <option value="Oficina">Oficina</option>
+			  <option value="Estudiante">Estudiante</option>
+			</select>
+		  </div>
+
+		  <div class="precioNewProduct">
+			<label for="price" class="labelNewProduct" >Precio:</label>
+			<input  class="inputNewProduct" type="text" id="price" name="price" value="<%= product.price %>" >
+		  </div>
+
+		  <div class="stockNewProduct">
+			<label for="stock" class="labelNewProduct" >Stock:</label>
+			<input class="inputNewProduct" type="text" id="stock" name="stock" value="<%= product.stock %>" >
+		  </div>
+
+		  <div class="discountNewProduct">
+			<label for="discount" class="labelNewProduct">Descuento:</label>
+			<input class="inputNewProduct" type="text" id="discount" name="discount" value="<%= product.discount %>" >
+		  </div>
+
+		  <div class="imageNewProduct">
+			<label for="image">imagen del producto</label>
+			<input type="file" name="image" id="image" >
+		</div>
+
+		 
+
+		  <div class="descriptionNewProduct">
+			<label for="description"></label>
+			<textarea type="text" name="description" value="<%= product.description %>" id="description"  rows="5" required></textarea>
+		  </div>
+
+
+		  <div class="submit">
+			<input type="submit" value="Editar Producto" class="buttomNewProduct"/>
+		  </div>
+
+		</form>
+	  </div>
+

@@ -1,0 +1,90 @@
+/* Importacion de tipografia a usar en la pagina */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* font-family: 'Roboto', sans-serif;  */
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: white;
+    padding: 0px 20px;
+}
+
+/* variables colores */
+
+:root{
+--rosa:#FFABC9;
+--celeste: #C0FFF0; 
+--gris: #d1cccc;
+--negro: black; 
+--blanco: white;
+--rosaD: #F82B9A;
+}
+
+/* h4 subtitulos de las vistas */
+h4{
+    text-align: center;
+    padding: 10px  ;
+    text-shadow: 2px -1px 2px var(--rosa);
+    font-size: 1em;
+    text-transform: uppercase;
+  
+}
+
+/* Productos */
+
+.section-products{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1rem;
+   }
+
+.section-products p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+   .cart-products img{
+    width: 400px;
+   }
+
+
+
+
+/* boton agregar de los productos */
+.button-agregar{
+    display: flex;
+    justify-content: center;
+    background-color: var(--rosaD);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    margin: 10px ;
+    width: 80%;
+    font-size: 80%;
+   }
+ 
+/* CODIGO HTML PARA BOTON AGREGAR */
+
+/* <a href="#">
+   <button class="button-agregar" >AGREGAR</button>
+</a>  */
