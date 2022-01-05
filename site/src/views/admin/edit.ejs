@@ -8,43 +8,54 @@
 	<div class="containerNewProduct">
 		<p class="titleNewProduct">EDICION DE PRODUCTO</p>
 	
-		
-		<form  action="/admin/edit/<%= product.id %>?_method=PUT" method="POST" >
+		<form  action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
 		  <div class="nameNewProduct">
-			<label for="name" class="labelNewProduct">Nombre del producto: </label>
-			<input class="inputNewProduct" type="text" id="name" name="name" value="<%= product.name %>" required>
+			<label for="nombre" class="labelNewProduct"> Nombre del producto: </label>
+			<input class=<%= locals.errors && errors.nombre ? 'danger' : 'data' %> type="text" id="nombre" name="nombre" placeholder="Por ej: lapiceras trazo fino" value= <%= locals.old && old.nombre ? old.nombre : null %> <%= producto.nombre %>>
+			<% if(locals.errors && errors.nombre) { %> 
+				<small> <%= errors.nombre.msg %> </small>
+			<% } %> 
 		  </div>
 
 		  <div class="markNewProduct">
-			<label for="mark" class="labelNewProduct">Marca:</label>
-			<input class="inputNewProduct" type="text" value="<%= product.mark %>" name="mark" id="mark" required>
+			<label for="marca" class="labelNewProduct" >Marca:</label>
+			<input class=<%= locals.errors && errors.marca? 'danger' : 'data' %> type="text" placeholder="Por Ej: Bic" name="marca" id="marca" value=<%= locals.old && old.marca ? old.marca : null %> <%= producto.marca %> >
+			<% if(locals.errors && errors.marca) { %> 
+				<small> <%= errors.marca.msg %> </small>
+			<% } %> 
 		  </div>
 
 		  <div class="categoryNewProduct">
-			<label for="category" class="labelNewProduct">Categoria: </label>
-			<select name="category" id="category" >
-			  <option disabled hidden selected>Elegir</option>
-			  <option value="Libreria">Libreria</option>
-			  <option value="Papeleria">Papeleria</option>
-			  <option value="Oficina">Oficina</option>
-			  <option value="Estudiante">Estudiante</option>
-			</select>
+
+			<label for="categorias" class="labelNewProduct" >Categoria: </label>
+			<select name="categoriaId" id="categorias" class=<%= locals.errors && errors.categorias? 'danger' : 'data' %>  value=<%= locals.old && old.categorias ? old.categorias : null %> >
+            <option value="" selected hidden >Selecciona una categoria</option>
+			<% categorias.forEach(categoria => { %>
+				<option <%= producto.categoriaId === categoria.id ? "selected" : null %> value=<%=categoria.id%> ><%= categoria.nombre %></option>
+				<% }) %>
+
 		  </div>
 
 		  <div class="precioNewProduct">
-			<label for="price" class="labelNewProduct" >Precio:</label>
-			<input  class="inputNewProduct" type="text" id="price" name="price" value="<%= product.price %>" >
+			<label for="precio" class="labelNewProduct" > Precio:</label>
+			<input  class=<%= locals.errors && errors.precio ? 'danger' : 'data' %> type="text" id="precio" name="precio" placeholder="Por Ej: 50" value=<%= locals.old && old.precio ? old.precio : null %> <%= producto.precio %>>
+			<% if(locals.errors && errors.precio) { %> 
+				<small> <%= errors.precio.msg %> </small>
+			<% } %> 
 		  </div>
 
 		  <div class="stockNewProduct">
 			<label for="stock" class="labelNewProduct" >Stock:</label>
-			<input class="inputNewProduct" type="text" id="stock" name="stock" value="<%= product.stock %>" >
+			<input class=<%= locals.errors && errors.stock? 'danger' : 'data' %> type="text" id="stock" name="stock" placeholder="Por Ej: 10" value=<%= locals.old && old.stock ? old.stock : null %> <%= producto.stock %>>
+			<% if(locals.errors && errors.stock) { %> 
+				<small> <%= errors.stock.msg %> </small>
+			<% } %> 
 		  </div>
 
 		  <div class="discountNewProduct">
-			<label for="discount" class="labelNewProduct">Descuento:</label>
-			<input class="inputNewProduct" type="text" id="discount" name="discount" value="<%= product.discount %>" >
+			<label for="descuento" class="labelNewProduct">Descuento:</label>
+			<input class="inputNewProduct" type="text" id="descuento" name="descuento" placeholder="Por Ej: 15" value="<%= producto.descuento %>">
 		  </div>
 
 		  <div class="imageNewProduct">
@@ -55,15 +66,26 @@
 		 
 
 		  <div class="descriptionNewProduct">
-			<label for="description"></label>
-			<textarea type="text" name="description" value="<%= product.description %>" id="description"  rows="5" required></textarea>
+			<label for="descripcion"></label>
+			<textarea class=<%= locals.errors && errors.user_name ? 'danger' : 'data' %> name="descripcion" placeholder="<%= producto.descripcion%>" id="descripcion"  rows="5"></textarea value=<%= locals.old && descripcion ? old.descripcion : null %>>
+				<% if(locals.errors && errors.descripcion) { %> 
+					<small> <%= errors.descripcion.msg %> </small>
+				<% } %> 
 		  </div>
 
 
 		  <div class="submit">
-			<input type="submit" value="Editar Producto" class="buttomNewProduct"/>
+			<input type="submit" value="Guardar" class="buttomNewProduct"/>
 		  </div>
 
 		</form>
 	  </div>
 
+
+
+
+  
+</main>
+
+
+</body>

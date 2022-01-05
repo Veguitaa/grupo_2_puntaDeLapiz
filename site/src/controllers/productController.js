@@ -1,16 +1,20 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let db = require('../database/models');
 
 
 module.exports = {
     product:  (req, res,) => {
-      const {id} = req.params
-		  const productDetail = products.find(e => e.id === + id)
 
-		res.render('product', {products, productDetail, products:JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))})
-      }
+      db.Productos.findByPk(req.params.id,{
+        include : [{all:true}]
+       })
+            .then(productos =>{
+                return res.render("product",{
+                    productos
+            })
+            })
+            .catch(error => console.log(error))
     
-}
+    }}

@@ -5,7 +5,7 @@ const authUser = require('../middlewares/authUser')
 
 
 /* GET home page. */
-router.get('/:id/', authUser, product);
+router.get('/:id/', /* authUser, */ product);
 
 
 module.exports = router;

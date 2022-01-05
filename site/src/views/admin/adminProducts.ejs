@@ -4,7 +4,7 @@
 <main >
 
   <section class="caption">
-    <div><p>Mis Productos</p></div>
+    <div><p>Mis producto</p></div>
     <div>
       <a href="/users/user/1"> <button>Volver a mi perfil</button></a>
       <a href="/admin/create"><button>Crear Producto</button></a>
@@ -19,15 +19,15 @@
         <span class="cell">Detalles</span>
         <span class="cell"> </span>
       </div>
-    <% products.map (product => { %>
+    <% productos.forEach (producto => { %>
       <div class="row">
         <input class="inputout" type="radio" name="expand">
-          <span class="cell primary" data-label="Producto"><%= product.id %>- <%= product.name %></span>
-          <span class="cell" data-label="Imagen"><img class="cart-products" src="/img/productsimg/<%= product.image %> " alt="imagen producto"></span>
-          <span class="cell" data-label="Precio">$ <%= product.price %></span>
-          <span class="cell" data-label="Detalles"><a href="/product/<%= product.id %> ">ver más detalles</a></span>
-          <span class="cell" data-label=""><a href="/admin/edit/<%= product.id %> "><button>Editar</button></a>
-            <form action="/admin/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+          <span class="cell primary" data-label="Producto"><%= producto.categoriaId %>- <%= producto.nombre %></span>
+          <span class="cell" data-label="Imagen"><img class="cart-products" src="/img/productsimg/<%= producto.imagen %> " alt="imagen producto"></span>
+          <span class="cell" data-label="Precio">$ <%= producto.precio %></span>
+          <span class="cell" data-label="Detalles"><a href="/product/<%= producto.id%> ">ver más detalles</a></span>
+          <span class="cell" data-label=""><a href="/admin/edit/<%= producto.id %> "><button>Editar</button></a>
+            <form action="/admin/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit" class="action-button delete">Eliminar</button>
 						</form>
           </span>

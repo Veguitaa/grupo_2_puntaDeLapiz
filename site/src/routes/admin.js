@@ -1,34 +1,38 @@
 var express = require('express');
 var router = express.Router();
 
-const multer = require('multer')
-const path = require('path')
+const upload = require('../middlewares/multerproduct') /* required multer */
+/* const path = require('path') */
 
-const { list, create, edit,store, destroy, update } = require('../controllers/adminController')
+const validate = require('../validations/validateProducts')
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, './public/img/productsimg')
-    },
-    filename: function (req, file, cb) {
-      cb(null, `img-${Date.now()}${path.extname(file.originalname)}`)
-    }
-  })
-  
-  const upload = multer({ storage: storage })
+const { list, create, edit, store, destroy, update } = require('../controllers/adminControllerDB')
+
 
 /* GET home page. */
 
 router.get('/', list);
 
 
-router.get('/create', create);
-router.post('/', upload.single('image'),store); 
+      /*:::::::::::::::::::::::::::::::::::::::::::::::::::
+                       ruta creacion producto
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
+router.get('/create', create);
+router.post('/create', upload.single('image'), validate, store); 
+
+
+      /*:::::::::::::::::::::::::::::::::::::::::::::::::::
+                       ruta edicion producto
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 router.get('/edit/:id/', edit);
-router.put('/edit/:id', update); 
+router.put('/edit/:id', upload.single('image'), validate, update); 
 
+
+      /*:::::::::::::::::::::::::::::::::::::::::::::::::::
+                       ruta eliminacion producto
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 router.delete('/:id/', destroy); 
 

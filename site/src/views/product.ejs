@@ -11,14 +11,15 @@
 
         <section>
             <article class="producto">
-                <img class="cart-products" src="/img/productsimg/<%= productDetail.image %> " alt="imagen producto">
+                <img class="cart-products" src="/img/productsimg/<%= productos.imagen %> " alt="imagen producto">
                 <div class="detalle">
-                <h3><%= productDetail.mark %></h3>
-                <p>
-                    <%= productDetail.name %>
-                </p>
-                <p class="precio">$ <%= productDetail.price %></p>
-                <p class="diseños"><%= productDetail.description %></p>
+                    <p>
+                        <%= productos.nombre %>
+                    </p>
+                <h3><%= productos.marca %></h3>
+                
+                <p class="precio">$ <%= productos.precio %></p>
+                <p class="diseños"><%= productos.descripcion %></p>
                 
                 <div class="agregar">
                     <p> - 1 +</p>
@@ -30,23 +31,7 @@
             </article>
         </section>
 
-        <h4 class="tambien">TAMBIEN TE PUEDE INTERESAR</h4>
-        <section class="section-products">
-            <% products.map (product => { %>
-                <% if(product.category === "libreria"){%>
-            <article class="products">
-                <img class="cart-products" src="/img/productsimg/<%= product.image %> " alt="imagen producto">
-                <h3><%= product.mark %></h3>
-                <p>
-                    <%= product.name %> 
-                </p>
-                <p class="precio">$ <%= product.price %></p>
-                <a href="/product/<%= product.id %> ">
-                    <button class="button-agregar" >VER MÁS...</button>
-                </a> 
-            </article>
-            <% } %>
-			<% }) %>
+       
       
     </main>
 
