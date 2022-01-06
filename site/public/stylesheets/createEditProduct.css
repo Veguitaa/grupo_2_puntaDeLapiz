@@ -1,205 +1,188 @@
-.mainNewProduct{
-    background-color: var(--celeste);
-    padding: 100px 25% ;
-}
 
- 
 .containerNewProduct{
-background-color: white;
-  border: solid 3px var(--rosaD);
-  max-width: 768px;
-  position: relative;
+	background-color: var(--celeste);
+	  border: solid 3px var(--rosaD);
+	padding-left:25px;
+	 
+	}
+
+.formulario__h1{
+	margin: 50px 0px;
+  	color: var(--rosaD);
+ 	font-size: 32px;
+  	/* font-weight: 700; */
+  	letter-spacing: 2px;
+  	text-align: center;
+  	text-transform: uppercase;
+  	text-shadow: 2px -1px 2px black;
 }
 
-.containerNewProduct form {
-  padding: 37.5px;
-  margin: 50px 0;
-}
-
-.titleNewProduct {
-    padding-top: 10px;
-  color: var(--rosaD);
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 7px;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 2px -1px 2px black;
-}
-
-
-
-
-/* modificacion labels */
-
-
-.labelNewProduct{
-  font-size: 150%;
+main.mainformproduct{
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
 }
 
 
-.nameNewProduct {
-	width: 100%;
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
 }
 
-.markNewProduct {
-	float: left;
-	width: 45%;
+.formulario__label {
+
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
 }
 
-
-.categoryNewProduct {
-    float: right;
-    width: 45%;
-  }
-
-.precioNewProduct {
-    float: left;
-    width: 45%;
+.formulario__grupo-input {
+	
+	position: relative;
 }
 
-.stockNewProduct{
-    float: right;
-      width: 45%; 
+.formulario__input{
+	width: 90%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
 }
 
-.discountNewProduct{
-    width: 45%;
+.formulario__imagenout{
+	width: 200px;
 }
 
-.imageNewProduct{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.descriptionNewProduct {
-	float: none;
-    margin-top: 20px;
-}
-
-  
-
-
-
-.inputNewProduct, select {
-	background: none;
-  border: none;
-	border-bottom: solid 2px var(--rosaD);
-	color: #474544;
-	font-size: 1.000em;
-  font-weight: 400;
-  letter-spacing: 1px;
-	margin: 0em 0 1.875em 0;
-  padding-top: 15px;
-	width: 100%;
-}
-
-.descriptionNewProduct textarea {
-	background: none;
-  border: solid 2px var(--rosaD);
-	border-bottom: solid 2px var(--rosaD);
-	color: #474544;
-	font-size: 1.000em;
-  font-weight: 400;
-  letter-spacing: 1px;
-	margin: 0em 0 1.875em 0;
-	/* padding: 0 0 0.875em 0; */
-  padding: 10px;
+.descripcion_producto{
 	width: 100%;
 }
 
 
-
-.inputNewProduct:focus, textarea:focus {
+.formulario__input:focus {
+	border: 3px solid #0075FF;
 	outline: none;
-	padding: 0 0 0.875em 0;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
 }
 
-select {
-  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
-  outline: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
 }
 
-select::-ms-expand {
-  display: none;
+.formulario__input-error-activo {
+	display: block;
 }
 
-
-textarea {
-	/* line-height: 150%;
-	height: 150px; */
-	resize: none;
-    /* width: 100%; */
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
 }
 
-/* ::-webkit-input-placeholder {
-	color: #474544;
+.formulario__checkbox {
+	margin-right: 10px;
 }
 
-:-moz-placeholder { 
-	color: #474544;
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: var(--rosaD);
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: .1s ease all;
+	margin: 20px 0px 50px 0px;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgb(0, 0, 0);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
 	opacity: 1;
 }
 
-::-moz-placeholder {
-	color: #474544;
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
 	opacity: 1;
 }
 
-:-ms-input-placeholder {
-	color: #474544;
-} */
-
-.buttomNewProduct {
-  background: none;
-  border: solid 2px var(--rosaD);
-  color: black;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Helvetica', Arial, sans-serif;
-  font-size: 0.875em;
-  font-weight: bold;
-  outline: none;
-  padding: 20px 35px;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
 }
 
-.buttomNewProduct:hover {
-  background: var(--rosaD);
-  color: white;
-}
 
-@media /* screen & */ (max-width: 768px) {
-    .containerNewProduct {
-    margin: 20px auto;
-    width: 95%;
-  }
-}
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
 
-@media /* screen and */ (max-width: 480px) {
-.titleNewProduct {
-    font-size: 26px;
-  }
-  
-  .buttomNewProduct {
-    padding: 15px 25px;
-  }
-}
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
 
-@media /* screen and  */(max-width: 420px) {
-    .titleNewProduct {
-    font-size: 18px;
-  }
-
-  input[type='text'], [type='email'], select, textarea {
-    font-size: 0.875em;
-  }
+	.formulario__btn {
+		width: 100%;
+	}
 }

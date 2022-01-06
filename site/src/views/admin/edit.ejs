@@ -3,85 +3,151 @@
 <%- include('../partials/headerAdmin') %>
 
 
-<main class="mainNewProduct">
+<main class="mainformproduct">
 
-	<div class="containerNewProduct">
-		<p class="titleNewProduct">EDICION DE PRODUCTO</p>
-	
-		<form  action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+	<section class="containerNewProduct">
+		<h1 class="formulario__h1" >EDICION DE PRODUCTO</h1>
 
-		  <div class="nameNewProduct">
-			<label for="nombre" class="labelNewProduct"> Nombre del producto: </label>
-			<input class=<%= locals.errors && errors.nombre ? 'danger' : 'data' %> type="text" id="nombre" name="nombre" placeholder="Por ej: lapiceras trazo fino" value= <%= locals.old && old.nombre ? old.nombre : null %> <%= producto.nombre %>>
-			<% if(locals.errors && errors.nombre) { %> 
-				<small> <%= errors.nombre.msg %> </small>
-			<% } %> 
-		  </div>
+		<form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST" class="formulario" id="formulario" enctype="multipart/form-data">
+			
+			
 
-		  <div class="markNewProduct">
-			<label for="marca" class="labelNewProduct" >Marca:</label>
-			<input class=<%= locals.errors && errors.marca? 'danger' : 'data' %> type="text" placeholder="Por Ej: Bic" name="marca" id="marca" value=<%= locals.old && old.marca ? old.marca : null %> <%= producto.marca %> >
-			<% if(locals.errors && errors.marca) { %> 
-				<small> <%= errors.marca.msg %> </small>
-			<% } %> 
-		  </div>
 
-		  <div class="categoryNewProduct">
+			<!-- Grupo: nombre -->
+			<div class="formulario__grupo" id="grupo__usuario">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" <%= locals.errors && errors.nombre ? 'danger' : 'data' %> name="nombre" id="nombre" placeholder="Por ej: lapiceras" value=<%= locals.old && old.nombre ? old.nombre : null %> <%= producto.nombre %>>
+					
+					<br>
+					<% if(locals.errors && errors.nombre) { %> 
+						<small> <%= errors.nombre.msg %> </small>
+					<% } %> 
+		
+				</div>
+			</div>
 
-			<label for="categorias" class="labelNewProduct" >Categoria: </label>
-			<select name="categoriaId" id="categorias" class=<%= locals.errors && errors.categorias? 'danger' : 'data' %>  value=<%= locals.old && old.categorias ? old.categorias : null %> >
+			
+
+
+
+			
+			<!-- Grupo: marca -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="marca" class="formulario__label">Marca</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" <%= locals.errors && errors.marca? 'danger' : 'data' %> name="marca" id="marca" placeholder="Por Ej: Bic" value=<%= locals.old && old.marca ? old.marca : null %> <%= producto.marca %>>
+					
+					<br>
+					<% if(locals.errors && errors.marca) { %> 
+						<small> <%= errors.marca.msg %> </small>
+					<% } %> 
+				
+				</div>
+			</div>
+
+
+
+
+
+
+			<!-- Grupo: categoria  -->
+			<div class="formulario__grupo" id="grupo__password">
+
+			
+			
+			<label for="categorias" class="formulario__label" >Categoria: </label>
+			<div class="formulario__grupo-input"></div>
+			<select name="categoriaId" id="categorias" class= "formulario__input"<%= locals.errors && errors.categorias? 'danger' : 'data' %>  value=<%= locals.old && old.categorias ? old.categorias : null %> >
             <option value="" selected hidden >Selecciona una categoria</option>
 			<% categorias.forEach(categoria => { %>
 				<option <%= producto.categoriaId === categoria.id ? "selected" : null %> value=<%=categoria.id%> ><%= categoria.nombre %></option>
 				<% }) %>
+			</select>
 
-		  </div>
+					
+				</div>
+			</div>
 
-		  <div class="precioNewProduct">
-			<label for="precio" class="labelNewProduct" > Precio:</label>
-			<input  class=<%= locals.errors && errors.precio ? 'danger' : 'data' %> type="text" id="precio" name="precio" placeholder="Por Ej: 50" value=<%= locals.old && old.precio ? old.precio : null %> <%= producto.precio %>>
-			<% if(locals.errors && errors.precio) { %> 
-				<small> <%= errors.precio.msg %> </small>
-			<% } %> 
-		  </div>
-
-		  <div class="stockNewProduct">
-			<label for="stock" class="labelNewProduct" >Stock:</label>
-			<input class=<%= locals.errors && errors.stock? 'danger' : 'data' %> type="text" id="stock" name="stock" placeholder="Por Ej: 10" value=<%= locals.old && old.stock ? old.stock : null %> <%= producto.stock %>>
-			<% if(locals.errors && errors.stock) { %> 
-				<small> <%= errors.stock.msg %> </small>
-			<% } %> 
-		  </div>
-
-		  <div class="discountNewProduct">
-			<label for="descuento" class="labelNewProduct">Descuento:</label>
-			<input class="inputNewProduct" type="text" id="descuento" name="descuento" placeholder="Por Ej: 15" value="<%= producto.descuento %>">
-		  </div>
-
-		  <div class="imageNewProduct">
-			<label for="image">imagen del producto</label>
-			<input type="file" name="image" id="image" >
-		</div>
-
-		 
-
-		  <div class="descriptionNewProduct">
-			<label for="descripcion"></label>
-			<textarea class=<%= locals.errors && errors.user_name ? 'danger' : 'data' %> name="descripcion" placeholder="<%= producto.descripcion%>" id="descripcion"  rows="5"></textarea value=<%= locals.old && descripcion ? old.descripcion : null %>>
-				<% if(locals.errors && errors.descripcion) { %> 
-					<small> <%= errors.descripcion.msg %> </small>
-				<% } %> 
-		  </div>
+			<!-- Grupo: stock -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="stock" class="formulario__label">Stock</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" <%= locals.errors && errors.stock? 'danger' : 'data' %> name="stock" id="stock" placeholder="Por Ej: 100" value=<%= locals.old && old.stock ? old.stock : null %> <%= producto.stock %>>
+					
+					<br>
+					<% if(locals.errors && errors.stock) { %> 
+						<small> <%= errors.stock.msg %> </small>
+					<% } %> 
+					
+					
+				
+				</div>
+			</div>
 
 
-		  <div class="submit">
-			<input type="submit" value="Guardar" class="buttomNewProduct"/>
-		  </div>
+			<!-- Grupo: precio -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="precio" class="formulario__label">Precio</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" <%= locals.errors && errors.precio? 'danger' : 'data' %> name="precio" id="precio" placeholder="Por Ej: 100" value=<%= locals.old && old.precio ? old.precio : null %> <%= producto.precio %> >
+					
+					<br>
+					<% if(locals.errors && errors.precio) { %> 
+						<small> <%= errors.precio.msg %> </small>
+					<% } %> 
+				
+				</div>
+			</div>
 
+			
+			<!-- Grupo: descuento -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="descuento" class="formulario__label">descuento</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="descuento" id="descuento" placeholder="Por Ej: 15" value="<%= producto.descuento %>">
+
+				</div>
+			</div>
+
+			<!-- Grupo: imagen -->
+
+			<div class="formulario__grupo">
+				<label class="formulario__label" for="image"  >Agregar imagen</label>
+				<input type="file" name="image" id="image" accept="image/*" onchange="loadFile(event)" value="<%= producto.image %>" >
+				
+				
+				<script>
+					var loadFile = function(event) {
+					  var output = document.getElementById('output');
+					  output.src = URL.createObjectURL(event.target.files[0]);
+					};
+				  </script>
+				
+				
+			</div>
+			<div >
+				<img class="formulario__imagenout" id="output"/>
+			</div>
+			
+			<!-- Grupo: descripcion -->
+			<div class="formulario__grupo">
+				<label for="descripcion" class="formulario__label">Descripcion del producto</label>
+				<textarea class= "descripcion_producto" name="descripcion" id="descripcion" placeholder="<%= producto.descripcion %>" rows="10" ></textarea>
+					
+			  </div>
+	
+
+			<!-- <div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div> -->
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Editar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Producto creado</p>
+			</div>
 		</form>
-	  </div>
-
-
+	</section>
 
 
   

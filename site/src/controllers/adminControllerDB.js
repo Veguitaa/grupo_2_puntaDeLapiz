@@ -4,6 +4,7 @@ const path = require('path');
 const { validationResult } = require('express-validator')
 
 let db = require('../database/models');
+const { map } = require('../validations/validateProducts');
 
 
 
@@ -22,6 +23,10 @@ module.exports = {
     },
 
 
+
+
+
+
       /*:::::::::::::::::::::::::::::::::::::::::::::::::::
                        creacion producto
        ::::::::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -29,7 +34,7 @@ module.exports = {
 
     create: (req,res)=>{
       
-
+      
       db.Categorias.findAll()
       .then(categorias => {
         return res.render('admin/create', {
@@ -43,25 +48,25 @@ module.exports = {
     },
 
   store:  (req, res,) => {
-    return res.send(req.body)
+   
     const errors = validationResult(req)
 
     if (errors.isEmpty()){
         const {nombre,marca,precio,stock,descuento,descripcion,categoriaId} = req.body
-
-        /* let objeto = {
+        categorias.map()
+       /*  let objeto = {
           body:req.body,
           imagen:req.file
         }
-        return res.send(objeto) */
-      
+        return res.send(objeto)
+       */
         db.Productos.create({
           nombre: nombre.trim().toLowerCase(),
           marca,
           precio : +precio,
           stock : +stock,
           descuento : +descuento,
-          descripcion,
+          descripcion : descripcion.trim(),
           categoriaId : +categoriaId,
           imagen: req.file.filename?req.file.filename:'default-image.png'
         })
@@ -83,6 +88,9 @@ module.exports = {
     }
 
 },
+
+
+
 
 
       /*:::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -116,7 +124,7 @@ module.exports = {
       db.Productos.update({
         nombre: nombre.trim().toLowerCase(),
         marca,
-        precio,
+        precio : +precio,
         stock : +stock,
         descuento : +descuento,
         descripcion: descripcion.trim(),
@@ -129,7 +137,8 @@ module.exports = {
             }
       ).then( () =>   res.redirect('/admin'))
       .catch(error => console.log(error))
-
+    
+    
     },
 
 
