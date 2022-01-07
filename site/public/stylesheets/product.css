@@ -6,9 +6,12 @@ MAIN
 */
 
 .product main{
-    padding-top: 10px;
-    background-color:var(--celeste)	;  
+    padding: 50px 0px;
+    background-color:var(--celeste)	;
+    
 }
+
+
 
 article.producto{
     display: flex;
@@ -18,6 +21,7 @@ article.producto{
     margin: 10px auto;;
     padding: 10px;
     border-radius: 10px;
+   
 }
 article.producto img{
     width: 60%;
