@@ -8,6 +8,41 @@
     <%- include('./partials/header') %> 
    
     <main>
+        <section class="body_carrusel">
+            <div class="contenedor_carrusel">
+
+                <input type="radio" id="1" name="image-slide" hidden/>
+                <input type="radio" id="2" name="image-slide" hidden/>
+                <input type="radio" id="3" name="image-slide" hidden/>
+
+                <div class="carrusel">
+                    <div class="item_carrusel">
+                        <img class="img_carrusel" src="img/carrusel_1.gif" alt="">
+                    </div>
+
+                    <div class="item_carrusel">
+                        <img src="img/carrusel_2.gif" alt="">
+                    </div>
+
+                    <div class="item_carrusel">
+                        <img src="img/carrusel_3.gif" alt="">
+                    </div>
+                </div>
+
+                <div class="paginacion">
+                    <label class="item_paginacion" for="1">
+                        <img src="img/carrusel_1.gif" alt="">
+                    </label>
+                    <label class="item_paginacion" for="2">
+                        <img src="img/carrusel_2.gif" alt="">
+                    </label>
+                    <label class="item_paginacion" for="3">
+                        <img src="img/carrusel_3.gif" alt="">
+                    </label>
+                </div>
+
+            </div>
+        </section>
         
         <article class="articulo">
 
@@ -48,17 +83,67 @@
             </div>
         </article>
 
-        <section class="marcas">
-                       <div class="container-marcas">
-                <img width=100% src="img/logo-rivadavia.jpg" alt="Rivadavia">
+            </section>
+
+            <div class="carousel">
+                <div class="carousel__contenedor">
+                    <button aria-label="Anterior" class="carousel__anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel__lista">
+                        <div class="carousel__elemento">
+                            <img class="carousel__img" src="img/logo_exito.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img  class="carousel__img" src="img/logo_bic.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img  class="carousel__img" src="img/logo_faber.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img class="carousel__img" src="img/logo_ledesma.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img class="carousel__img" src="img/logo_paprika.png" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img class="carousel__img" src="img/logo_postit.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img class="carousel__img" src="img/logo_sharpie.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img  class="carousel__img" src="img/logo_avery.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img class="carousel__img" src="img/logo_casio.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img class="carousel__img" src="img/logo_edding.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img class="carousel__img" src="img/logo_muresco.webp" alt="">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img class="carousel__img" src="img/logo_pizzini.webp" alt="">
+                        </div>
+                    </div>
+
+                    <button aria-label="Siguente" class="carousel__siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div role="talist" class="carousel__indicadores"></div>
+
             </div>
-            <div class="container-marcas">
-                <img width=100% src="img/logo-bic.jpg" alt="Bic">
-            </div>
-            <div class="container-marcas">
-                <img width=100% src="img/logo-fabercastell.png" alt="FaberCastell">
-            </div>   
-        </section>
+
+
+
+        </div>
+
+       
         <h4>Productos destacados</h4> 
 
         
@@ -83,7 +168,7 @@
         </section>
         
         <div class="banner">
-            <img src="/img/booksale.png" alt="booksale">
+            <img src="/img/publicidad_home.png" alt="venta agenda">
         </div>
 
         <section class="lugares">
@@ -115,7 +200,10 @@
         </section>
    
     </main>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/carrusel.js"></script>
     <%- include('./partials/footer') %> 
 
 </body>
