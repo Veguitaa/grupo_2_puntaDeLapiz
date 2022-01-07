@@ -59,10 +59,10 @@
 				<div class="formulario__grupo-input"></div>
 				<select name="categoriaId" id="categoriaId" class= "formulario__input">
 					<option disabled hidden selected>Elegir</option>
-					<option value="Libreria">Libreria</option>
-					<option value="Papeleria">Papeleria</option>
-					<option value="Oficina">Oficina</option>
-					<option value="Estudiante">Estudiante</option>
+					<option value="1">Libreria</option>
+					<option value="2">Papeleria</option>
+					<option value="3">Oficina</option>
+					<option value="4">Estudiante</option>
 				</select>
 
 	
@@ -106,7 +106,7 @@
 			
 			<!-- Grupo: descuento -->
 			<div class="formulario__grupo" id="grupo__password">
-				<label for="descuento" class="formulario__label">descuento</label>
+				<label for="descuento" class="formulario__label">Descuento</label>
 				<div class="formulario__grupo-input">
 					
 					<input type="text" class="formulario__input" <%= locals.errors && errors.descuento? 'danger' : 'data' %> name="descuento" id="descuento" placeholder="Por Ej: 15" value=<%= locals.old && old.descuento ? old.descuento : null %> >
@@ -125,14 +125,14 @@
 			<!-- Grupo: imagen -->
 
 			<div class="formulario__grupo">
-				<label class="formulario__label" for="image"  >Agregar imagen</label>
-				<input type="file" name="image" id="image" accept="image/*" onchange="loadFile(event)" >
+				<label class="labelImagenProducto" for="image"  >Agregar imagen</label>
+				<input class="inputImagenProducto" type="file" name="image" id="image" accept="image/*" onchange="loadFile(event)" >
 				
 				
 				<script>
 					var loadFile = function(event) {
 					  var output = document.getElementById('output');
-					  output.src = URL.createObjectURL(event.target.file);
+					  output.src = URL.createObjectURL(event.target.files[0]);
 					};
 				  </script>
 				
@@ -147,8 +147,11 @@
 			<!-- Grupo: descripcion -->
 			<div class="formulario__grupo">
 				<label for="descripcion" class="formulario__label">Descripcion del producto</label>
-				<textarea class= "descripcion_producto" name="descripcion" id="descripcion"  rows="10" ></textarea>
-					
+				<textarea class= "descripcion_producto" <%= locals.errors && errors.descripcion? 'danger' : 'data' %>  name="descripcion" id="descripcion"  rows="10" value=<%= locals.old && old.descripcion ? old.descripcion : null %> ></textarea>
+				<br>
+				<% if(locals.errors && errors.descripcion) { %> 
+					<small> <%= errors.descripcion.msg %> </small>
+				<% } %> 
 			  </div>
 	
 

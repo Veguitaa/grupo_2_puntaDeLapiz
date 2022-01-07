@@ -22,15 +22,17 @@
     <% productos.forEach (producto => { %>
       <div class="row">
         <input class="inputout" type="radio" name="expand">
-          <span class="cell primary" data-label="Producto"><%= producto.categoriaId %>- <%= producto.nombre %></span>
+          <span class="cell primary" data-label="Producto"><%= producto.id%>- <%= producto.nombre %></span>
           <span class="cell" data-label="Imagen"><img class="cart-products" src="/img/productsimg/<%= producto.imagen %> " alt="imagen producto"></span>
           <span class="cell" data-label="Precio">$ <%= producto.precio %></span>
           <span class="cell" data-label="Detalles"><a href="/product/<%= producto.id%> ">ver más detalles</a></span>
           <span class="cell" data-label=""><a href="/admin/edit/<%= producto.id %> "><button>Editar</button></a>
-            <form action="/admin/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+            <form action="/admin/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex" id="eliminar-producto">
 							<button type="submit" class="action-button delete">Eliminar</button>
 						</form>
           </span>
+          <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          <script src="/js/sweet.js"></script>
       </div>
       <% }) %>
     </div>

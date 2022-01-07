@@ -10,7 +10,7 @@
 	margin: 50px 0px;
   	color: var(--rosaD);
  	font-size: 32px;
-  	/* font-weight: 700; */
+  	
   	letter-spacing: 2px;
   	text-align: center;
   	text-transform: uppercase;
@@ -24,6 +24,39 @@ main.mainformproduct{
 	padding: 40px;
 }
 
+
+
+.inputImagenProducto{
+	width: 0.1px;
+ height: 0.1px;
+ opacity: 0;
+ overflow: hidden;
+ position: absolute;
+ z-index: -1;
+ 
+}
+
+.labelImagenProducto{
+ font-size: 10px;
+ font-weight: 300px;
+ color: #fff;
+ background-color: #106BA0;
+ display: inline-block;
+ transition: all .5s;
+ cursor: pointer;
+ padding: 15px 20px !important;
+ text-transform: uppercase;
+ width: fit-content;
+ text-align: center;
+ border-radius: 20px;
+ transition: .1s ease all;
+}
+
+.labelImagenProducto:active {
+	
+	background-color: #e61b00;
+	
+}
 
 .formulario {
 	display: grid;
@@ -56,11 +89,13 @@ main.mainformproduct{
 }
 
 .formulario__imagenout{
-	width: 200px;
+	width: 80%;
 }
 
 .descripcion_producto{
-	width: 100%;
+	 
+    width:95%;
+   
 }
 
 
@@ -140,18 +175,18 @@ main.mainformproduct{
 	box-shadow: 3px 0px 30px rgb(0, 0, 0);
 }
 
-.formulario__mensaje-exito {
+/* .formulario__mensaje-exito {
 	font-size: 14px;
 	color: #119200;
 	display: none;
-}
+} */
 
-.formulario__mensaje-exito-activo {
+/* .formulario__mensaje-exito-activo {
 	display: block;
-}
+} */
 
 /* ----- -----  Estilos para Validacion ----- ----- */
-.formulario__grupo-correcto .formulario__validacion-estado {
+/* .formulario__grupo-correcto .formulario__validacion-estado {
 	color: #1ed12d;
 	opacity: 1;
 }
@@ -167,11 +202,11 @@ main.mainformproduct{
 
 .formulario__grupo-incorrecto .formulario__input {
 	border: 3px solid #bb2929;
-}
+} */
 
 
 /* ----- -----  Mediaqueries ----- ----- */
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 	.formulario {
 		grid-template-columns: 1fr;
 	}
@@ -183,6 +218,49 @@ main.mainformproduct{
 	}
 
 	.formulario__btn {
-		width: 100%;
+		width: 50%;
 	}
+	
+
+	.formulario__h1{
+		
+		 font-size: 28px;
+		  
+	}
+	.descripcion_producto{
+	 
+		width:95%;
+	   
+	}
+}
+
+
+@media only screen and (max-width: 481px) {
+
+	
+	.formulario {
+		grid-template-columns: 100%;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 0.5;
+	}
+
+	.formulario__btn {
+		width: 35%;
+	}
+
+	.formulario__h1{
+		
+		font-size: 20px;
+		 
+   }
+   .descripcion_producto{
+	 
+    width:75%;
+   
+}
+
 }

@@ -65,7 +65,7 @@
 
         <section class="section-products">
             <% productos.forEach (producto => { %>
-                <% if(+producto.categoriaId === 2){%>
+                <% if(+producto.categoriaId === 1){%>
             <article class="products">
                 <img class="cart-products" src="/img/productsimg/<%= producto.imagen %> " alt="imagen producto">
                 <h3><%= producto.marca %></h3>

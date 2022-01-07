@@ -53,7 +53,6 @@ module.exports = {
 
     if (errors.isEmpty()){
         const {nombre,marca,precio,stock,descuento,descripcion,categoriaId} = req.body
-        categorias.map()
        /*  let objeto = {
           body:req.body,
           imagen:req.file
@@ -61,14 +60,14 @@ module.exports = {
         return res.send(objeto)
        */
         db.Productos.create({
-          nombre: nombre.trim().toLowerCase(),
-          marca,
-          precio : +precio,
-          stock : +stock,
-          descuento : +descuento,
-          descripcion : descripcion.trim(),
-          categoriaId : +categoriaId,
-          imagen: req.file.filename?req.file.filename:'default-image.png'
+         nombre: nombre.trim().toLowerCase(),
+        marca,
+        precio : +precio,
+        stock : +stock,
+        descuento : descuento != undefined ? +descuento : 0,
+        descripcion: descripcion.trim(),
+        categoriaId : +categoriaId,
+        imagen: req.file.filename?req.file.filename:'default-image.png'
         })
 
 
@@ -117,9 +116,11 @@ module.exports = {
     },
 
     update: (req, res) => {
+      
 
       /* return res.send(req.body) */
       const {nombre,marca,precio,stock,descuento,descripcion,categoriaId} = req.body
+      
 
       db.Productos.update({
         nombre: nombre.trim().toLowerCase(),

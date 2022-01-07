@@ -8,7 +8,7 @@
 	<section class="containerNewProduct">
 		<h1 class="formulario__h1" >EDICION DE PRODUCTO</h1>
 
-		<form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST" class="formulario" id="formulario" enctype="multipart/form-data">
+		<form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST" class="formulario" id="formulario" enctype="multipart/form-data"  >
 			
 			
 
@@ -143,10 +143,12 @@
 			</div> -->
 
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn">Editar</button>
-				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Producto creado</p>
+				<button type="submit" class="formulario__btn" >Editar</button>
+				
 			</div>
 		</form>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          <script src="/js/sweetedit.js"></script>
 	</section>
 
 
