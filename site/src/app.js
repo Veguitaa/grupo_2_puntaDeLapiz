@@ -8,6 +8,7 @@ const methodOverride =  require('method-override');
 const recordame = require('./middlewares/cookieRecordame')
 const localsCheck = require('./middlewares/localsCheck')
 
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/product');

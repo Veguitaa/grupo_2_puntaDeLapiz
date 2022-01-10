@@ -1,4 +1,36 @@
 
+
+/* 
+*********************************************************
+home main
+*********************************************************
+*/
+
+
+.home main{
+    
+    background-color:var(--celeste)	;  
+    padding-bottom: 70px;
+}
+
+
+.home main .banner img{
+    width: 96%;
+    height: 40px;
+    margin: 1% 7% 5% 2%;
+}
+
+.h4_home{
+    text-align: center;
+    padding: 10px  ;
+    text-shadow: 2px -1px 2px var(--rosa);
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+
+
+
 /* 
 *********************************************************
 carrusel banner
@@ -7,9 +39,6 @@ carrusel banner
 
 .body_carrusel{
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
-   /*  padding: 30px; */
 }
 
 .img_carrusel{
@@ -146,12 +175,14 @@ carrusel marcas
 */
 
 .carousel{
-    margin: 20px 0px;
+    padding-top: 50px;
+   /*  margin: 20px 0px; */
+    background-color: #fff;
+  
 }
 .carousel__contenedor{
     position: relative;
-    padding: 0px 50px;
-    
+    padding: 0px 50px;  
 }
 
 .carousel__anterior,
@@ -187,13 +218,17 @@ carrusel marcas
 
 .carousel__lista{
     overflow: hidden;
+    
 }
 
 .carousel__img {
     height: 50px;
-    box-shadow: 0px 5px 10px rgb(68, 67, 67);
+    box-shadow: 0px 0px 0px rgb(68, 67, 67);
     border-radius: 10px;
     margin-bottom: 10px;
+}
+.carousel__img:hover{
+    box-shadow: 0px 5px 10px rgb(68, 67, 67);
 }
 
 .glider-dot{
@@ -202,102 +237,442 @@ carrusel marcas
 
 
 
+
+
+
+
 /* 
 *********************************************************
-home main
+tarjetas info
 *********************************************************
 */
 
 
-
-.home main{
-    
-    background-color:var(--celeste)	;  
-    padding-bottom: 70px;
-}
-
-.home main .articulo .services{
+.container__cardultimo{
+    padding: 100px 0px;
+    background: #fff;
+    width: 100%;
+    margin: auto;
+    /* margin-top: 100px; */
+    perspective: 1000px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     justify-content: space-around;
-    padding: 40px 0px;
-    background-color: rgb(233, 231, 231);
+    flex-wrap: wrap;
+    /* background: #F1FAFF */
 }
 
-.home main .articulo .services .item {
-    display:flex;
-    flex-direction: column;
-    background-color: white;
-    border: 1px solid var(--negro);
-    box-shadow: 0px 2px 5px rgb(1 1 1);
-    width: 40%;
+.card__fatherultimo{
+    
+    /* margin: 0 50px 150px 50px; */
+    perspective: 1000px;
+}
+
+.card__fatherultimo:hover .cardultimo{
+    transform: rotateY(180deg);
+}
+
+
+.cardultimo{
+    width: 250px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+
+.card__frontultimo{
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card__frontultimo,
+.card__backultimo{
+    width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.card__backultimo{
+    transform: rotateY(180deg);
+    background: var(--celeste);
+}
+
+.body__card_frontultimo{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateZ(60px);
+}
+
+.bgultimo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+.body__card_backultimo{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+}
+
+.body__card_backultimo p{
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.body__card_backultimo input{
+    padding: 10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #58B0F6;
+    box-shadow: 1px 1px 30px -5px #58B0F6;
     border-radius: 10px;
-    padding: 5px 0px;
-    margin-bottom: 20px;
+    transition: box-shadow 600ms;
 }
 
-.home main .articulo .services .item .icono{
-    font-size: 28px;
-   display:flex;
-   justify-content: center;
+.body__card_backultimo input:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;
 }
 
-.home main .articulo .services .item h4{
-    display:flex;
-    justify-content: center;
-    color:#da6478;
-    margin-left: 7px ;
-    padding-top: 5px;
-    padding-bottom:5px;
-    font-size: 14px;
+
+
+
+/* 
+*********************************************************
+CARRUSEL PRODUCTOS
+*********************************************************
+*/
+
+.css_carusel_product{
+    padding-top: 100px;
+    margin-bottom: 100px;
 }
 
-.home main .articulo .services .item p{
-    display:flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    font-size: 13px;
+
+.card_product{
+    width: 180px;
+    height: 250px;
+    background: #f4f4f4;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s ease-in-out,
+                    transform .5s ease-in-out;
+    overflow: hidden;
+    
+                     
+}
+
+.card_product:hover{
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0, 0, 0, .2);
+
+}
+
+.img_cardbox{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.img_cardbox img{
+    width: 100%;
+    height: 100%;
+}
+
+.details_product{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #ffabc865;
+    padding: 10px;
+    bottom: -74px;
+    transition: 0.5s;
+}
+
+.details_product:hover{
+    bottom: 0;
+}
+
+.textcontent_product{
+    position: relative;
+    margin-top: -5px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 30ch;
+   
+}
+
+.textcontent_product h3{
+    font-size: 10px;
+    padding: 5px 0;
+    max-width: 75ch;
+    
+}
+
+.price_product{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+}
+
+.details_product h4{
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 10px 0;
+    padding-right: 10px;
+    font-weight: bold;
+    color: var(--rosaD);
+}
+
+
+/* PARA PONER OPCIONES DE COLORES */
+
+
+/* .details_product ul{
+    display: flex;
+} */
+
+/* .details_product ul li{
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.details_product ul li:nth-child(1){
+    background: #00f;
+}
+.details_product ul li:nth-child(2){
+    background: rgb(204, 247, 12);
+}
+.details_product ul li:nth-child(3){
+    background: rgb(14, 170, 0);
+}
+.details_product ul li:nth-child(4){
+    background: rgb(255, 0, 0);
+} */
+
+.details_product button{
+    width: 100%;
+    padding: 5px 0;
+    margin: 10px 0;
+    background: var(--celeste);
+    color: #000000;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.details_product button:hover{
+    background: var(--rosaD);
+    color: #fff;
+}
+
+.description_product{
+    background: rgb(18, 1, 255);
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: -70px;
+    right: -70px;
+    border-radius: 0 0 200px 200px;
+    transition: all .5s, border-radius 1s, top 1s ;
+
+}
+
+.description_product .icons_product{
+    position: absolute;
+    top: 85px;
+    right: 85px;
+    color: #fff;
+    opacity: 1;
+
+}
+
+.description_product:hover{
+    width: 100%;
+    height: 80%;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+
+}
+
+.description_product:hover .icons_product{
+    opacity: 0;
+
+}
+
+.description_product .contents_product{
+    color: rgb(255, 255, 255);
+    padding: 5%;
+    transform: scale(0.5);
+    transform: translateY(-200%);
+    transition: opacity .2s, transform 1s;
+    opacity: 0;
+}
+
+.description_product:hover .contents_product{
+    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contents_product h2{
+    margin: 20px 0;
     text-align: center;
 }
 
 
-.home main .banner img{
-    width: 96%;
-    height: 40px;
-    margin: 1% 7% 5% 2%;
+.product__redising{
+    padding-left: 50px;
 }
 
-.home main .lugares{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
+
+
+
+
+/* 
+*********************************************************
+tarjetas categorias
+*********************************************************
+*/
+
+/* .tajetasInfo__home{
+background-color: var(--celeste);
+} */
+.cards__info{
+    background-color: var(--celeste);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,.5fr));
+    padding: 20px;
+    grid-gap: 40px;
+}
+.card__info{
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 1px 10px rgba(0,0,0,.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card__info:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,1);
+    transform: translateX(-3%) ;
+
+
+}
+
+.container__info{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+}
+.container__info img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
     
 }
-.home main .lugares div{
-    display: flex;
-   justify-content: center;
-    width: 50%;
-    height: 135px;
-    position: relative;
-} 
-.home main .lugares div img{
-    object-fit: cover;
-    width: 80%;
-    height: 120px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-.home main .lugares div a{
+.container__info:after{
+    content: "";
+    height: 100%;
+    width: 100%;
     position: absolute;
-    background-color: var(--celeste);
-    bottom: 36px;
-    left: 10%;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+.card1>.container__info:after{
+    background-image: linear-gradient(
+        135deg,
+        #0100ec,
+        #fb36f4
+    );
+}
+.card2>.container__info:after{
+    background-image: linear-gradient(
+        135deg,
+        #2bdce3,
+        #42ffdb
+    );
+}
+.card3>.container__info:after{
+    background-image: linear-gradient(
+        135deg,
+        #ffab1d,
+        #f8501c
+    );
+}
+.card4>.container__info:after{
+    background-image: linear-gradient(
+        135deg,
+        #F82B9A,
+        #FFABC9
+    );
+}
+.details__info{
+    padding: 20px 10px;
+}
+.details__info>h3{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+.details__info>p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
 }
 
-.home main .lugares .lugares-tablet{
-    display:none;
+
+.btn_info_home{
+    float: right;
+    background: var(--celeste);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+	transition: .1s ease all;
+    margin-top: -20px;
 }
+
+.btn_info_home:hover{
+   background: #1c1b29;
+   color: #fff;
+}
+
+
+
 
 
 
@@ -347,6 +722,8 @@ MEDIA QUERIS
 
 
 @media(min-width: 769px){
+
+    
     
     main .section-products .products-desk {
             display: inline;

@@ -20,8 +20,8 @@ a{
 }
 
 body{
-    background: white;
-    padding: 0px 20px;
+    background: var(--celeste);
+   
 }
 
 /* variables colores */
@@ -88,3 +88,5 @@ h4{
 /* <a href="#">
    <button class="button-agregar" >AGREGAR</button>
 </a>  */
+
+

@@ -7,7 +7,11 @@
 
     <%- include('./partials/header') %> 
    
-    <main>
+    <main >
+
+        <!-- *********************************************************
+            CARRUSEL BANNER
+        ********************************************************* -->
         <section class="body_carrusel">
             <div class="contenedor_carrusel">
 
@@ -43,47 +47,11 @@
 
             </div>
         </section>
-        
-        <article class="articulo">
 
-            <div class="services">
-                
-                <div class="item">
-                    <div class="icono">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h4>Envios a todo el país</h4>
-                    <p >Llegamos a todos los rincones del pais.</p>
-                </div>
-               
-                <div class="item">
-                    <div class="icono">
-                        <i class="far fa-credit-card"></i>
-                   </div>
-                    <h4>Facilidades de pago</h4>
-                    <p >Recibimos todos los medios de pago.</p> 
-                </div>
-               
-                <div class="item">
-                    <div class="icono">
-                        <i class="fas fa-award"></i>
-                   </div>
-                    <h4>Precios Premium</h4>
-                    <p >Precios especiales a instituciones, empresas y revendores.</p>   
-               
-                </div>
-               
-                <div class="item">
-                    <div class="icono">
-                        <i class="fas fa-award"></i>
-                   </div>
-                    <h4>Seguimiento de pedido</h4>
-                    <p>En el despacho de todos nuestros paquetes</p>
-                </div>
-            </div>
-        </article>
 
-            </section>
+   <!-- *********************************************************
+            CARRUSEL MARCAS
+            ********************************************************* -->
 
             <div class="carousel">
                 <div class="carousel__contenedor">
@@ -139,71 +107,247 @@
 
             </div>
 
+    
+        <!-- *********************************************************
+            TARJETAS INFO
+        ********************************************************* -->
 
+        <div class="container__cardultimo">
+
+            <div class="card__fatherultimo">
+                <div class="cardultimo">
+                    <div class="card__frontultimo" style="background-image: url(/img/envios_pais.png);">
+                        <div class="bgultimo"></div>
+                        <div class="body__card_frontultimo">
+                            <h1>Envio a todo el pais</h1>
+                        </div>
+                    </div>
+                    <div class="card__backultimo">
+                        <div class="body__card_backultimo">
+                            <h1>Envio Argentina</h1>
+                            <p>Vamos a cada rincon del pais, llevandote los mejores productos a la puerta de tu casa. </p>
+                           <!--  <input type="button" value="Leer Más"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__fatherultimo">
+                <div class="cardultimo">
+                    <div class="card__frontultimo" style="background-image: url(/img/formas_pago.jpeg);">
+                        <div class="bgultimo"></div>
+                        <div class="body__card_frontultimo">
+                            <h1>Facilidad de pago</h1>
+                        </div>
+                    </div>
+                    <div class="card__backultimo">
+                        <div class="body__card_backultimo">
+                            <h1>Formas de pago</h1>
+                            <p>Recibimos todas las forma de pago, para facilitarte llegar a lo que buscas.</p>
+                            <!-- <input type="button" value="Leer Más"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__fatherultimo">
+                <div class="cardultimo">
+                    <div class="card__frontultimo" style="background-image: url(/img/precios_especiales.jpg);">
+                        <div class="bgultimo"></div>
+                        <div class="body__card_frontultimo">
+                            <h1>Precios premium</h1>
+                        </div>
+                    </div>
+                    <div class="card__backultimo">
+                        <div class="body__card_backultimo">
+                            <h1>Precios cuidados</h1>
+                            <p>Tenemos grandes precios y descuento, para empresas, instituciones, revendedores y estudiantes.</p>
+                            <!-- <input type="button" value="Leer Más"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
 
         </div>
-
        
-        <h4>Productos destacados</h4> 
 
-        
 
-        <section class="section-products">
-            <% productos.forEach (producto => { %>
-                <% if(+producto.categoriaId === 1){%>
-            <article class="products">
-                <img class="cart-products" src="/img/productsimg/<%= producto.imagen %> " alt="imagen producto">
-                <h3><%= producto.marca %></h3>
-                <p>
-                    <%= producto.nombre %> 
-                </p>
-                <p class="precio">$ <%= producto.precio %></p>
-                <a href="/product/<%= producto.id %> ">
-                    <button class="button-agregar" >VER MÁS...</button>
-                </a> 
-            </article>
-            <% } %>
-			<% }) %>
-          
-        </section>
+ <!-- *********************************************************
+            CARUSEL PRODCTOS
+        ********************************************************* -->
+<div class="css_carusel_product">
+<section class="product__redising">
+<div class="products_body center productos__nuevos">
+    <% productos.forEach (producto => { %>
+        <% if(+producto.categoriaId === 1){%>
+
+    <div class="wrapper">
+        <div class="card_product container_2">
+            <div class="img_cardbox">
+                <img src="/img/productsimg/<%= producto.imagen %> " alt="imagen producto">
+            </div>
+            <div class="details_product">
+                    <div class="textcontent_product">
+                        <h3> <%= producto.nombre %> </h3>
+                    </div>
+                    <h4 class="price_product">$ <%= producto.precio %></h4>
+                    <!-- <h4>color</h4> -->
+                    <!-- <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul> -->
+                    <button>Ver producto</button>
+            </div>
+            <div class="description_product">
+                <div class="icons_product">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="contents_product">
+                    <h2><%= producto.marca %></h2>
+                    <p><%= producto.descripcion %></p>
+                </div>
+            </div>
+        </div>
+   </div>
+        <% } %>
+        <% }) %>
+
+</div>
+
+</section>
+
+</div>
+
+ <!-- *********************************************************
+            BANNER PUBLICIDAD
+        ********************************************************* -->
+
+
         
         <div class="banner">
             <img src="/img/publicidad_home.png" alt="venta agenda">
         </div>
 
-        <section class="lugares">
-            <div>
-                <img   src="/img/oficina.jpg" alt="Oficina">
-                <a href="">Empresas</a>
+
+
+ <!-- *********************************************************
+            CARUSEL PRODUCTOS 2
+        ********************************************************* -->
+
+        <div class="css_carusel_product">
+
+        <section class="product__redising">
+
+            <div class="products_body center productos__nuevos">
+                <% productos.forEach (producto => { %>
+                    <% if(+producto.categoriaId === 4){%>
+            
+                <div class="wrapper">
+                    <div class="card_product container_2">
+                        <div class="img_cardbox">
+                            <img src="/img/productsimg/<%= producto.imagen %> " alt="imagen producto">
+                        </div>
+                        <div class="details_product">
+                                <div class="textcontent_product">
+                                    <h3> <%= producto.nombre %> </h3>
+                                </div>
+                                <h4 class="price_product">$ <%= producto.precio %></h4>
+                                <!-- <h4>color</h4> -->
+                                <!-- <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul> -->
+                                <button>Ver producto</button>
+                        </div>
+                        <div class="description_product">
+                            <div class="icons_product">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="contents_product">
+                                <h2><%= producto.marca %></h2>
+                                <p><%= producto.descripcion %></p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+                    <% } %>
+                    <% }) %>
+            
             </div>
-            <div>
-                <img  src="/img/escuela.jpg" alt="Escuela">
-                <a href="">Instituciones</a>
+            
+            </section>
             </div>
-            <div>
-                <img src="/img/libreria.jpg" alt="Librería">
-                <a href="">Revendores</a>
-            </div>
-            <div>
-                <img  src="/img/estudiouniversitario.jpg" alt="Universidad">
-                <a href="">Universitario</a>
-            </div>
+            
+
+        <!-- *********************************************************
+            TARJETAS CATEGORIAS
+        ********************************************************* -->
            
-            <div class="lugares-tablet">
-                <img src="/img/libreria.jpg" alt="Librería">
-                <a href="">Revendores</a>
-            </div>
-            <div class="lugares-tablet"> 
-                <img  src="/img/estudiouniversitario.jpg" alt="Universidad">
-                <a href="">Universitario</a>
-            </div>
-        </section>
-   
+                <div class="cards__info">
+                    
+                    <div class="card__info card1">
+                        <div class="container__info">
+                            <img   src="/img/libreria.jpg" alt="Oficina">
+                        </div>
+                        <div class="details__info">
+                            <h3>Libreria</h3>
+                            <button class="btn_info_home" >ver más...</button>
+                        </div>
+                    </div>
+                    <div class="card__info card2">
+                        <div class="container__info">
+                            <img   src="/img/papeleria.jpg" alt="Oficina">
+                        </div>
+                        <div class="details__info">
+                            <h3>Papeleria</h3>
+                            <button class="btn_info_home">ver más...</button>
+                        </div>
+                    </div>
+                    <div class="card__info card3">
+                        <div class="container__info">
+                            <img   src="/img/oficina.jpg" alt="Oficina">
+                        </div>
+                        <div class="details__info">
+                            <h3>Oficina</h3>
+                            <button class="btn_info_home">ver más...</button>
+                        </div>
+                    </div>
+                    <div class="card__info card4">
+                        <div class="container__info">
+                            <img   src="/img/estudiante.jpg" alt="Oficina">
+                        </div>
+                        <div class="details__info">
+                            <h3>Estudiante</h3>
+                            <button class="btn_info_home">ver más...</button>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                
+
+
     </main>
-    
+
+  <!-- *********************************************************
+            script
+        ********************************************************* -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/carrusel.js"></script>
+	<script src="js/carrusel_2.js"></script>
+    
     <%- include('./partials/footer') %> 
 
 </body>

@@ -2,96 +2,245 @@
 ***************************** footer *************************************
 **************************************************************************/
   
-
-
-footer{
-    background-color: var(--rosa);
-    display:flex;
-    flex-wrap: wrap;
-    width: 100%;
+.footer-distributed{
+	background: var(--rosa);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 50px 60px 40px;
+	overflow: hidden;
 }
 
-footer .logo-footer {
-    width: 50%;
-    display: flex;
-    justify-content: center   
+
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
 }
 
-footer .logo-footer img{
-    width: 40%;
-    margin-top: 5px;
+/* The company logo */
+.footer-left img{
+    width: 120px;
 }
 
-footer p{
-    width: 90%;
-    margin: 20px auto;
-    padding-bottom: 20px;
-    border-top: 1px solid var(--negro);
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #020202;
+	margin: 0 0 10px;
+	padding: 0;
 }
 
-footer .info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
 }
 
-footer .info .nosotros{
-    border-bottom: 1px solid black;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
+.footer-distributed .footer-links a:hover {
+    color: blue;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 10px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  var(--rosaD);
+	border-radius: 2px;
+    border-radius: 80px;
+
+	font-size: 20px;
+	color: var(--rosa);
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 10px;
+}
+
+.footer-distributed .footer-icons a:hover{
+    color:var(--rosaD);
+    background: var(--rosa);
     
 }
-footer .info h2{
-    width: 75%;
-    font-size: 14px;
-    color:var(--blanco)
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
 }
 
-@media(min-width: 481px){
-    /* Header */
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: transparent;
+    -webkit-text-stroke: 2px black;
+    font-size: 25px;
+}
 
-    .home header div div .logo {
-        width: 50px;
-        height: 50px;
-        box-shadow: 1px 0px 6px rgb(1 1 1);
-        border-radius: 50px;
-        margin-left: -80%;
-    }
+.footer-distributed .footer-right p:hover{
+    -webkit-text-stroke: 2px rgb(17, 248, 248);
+}
 
-    .home header div .busqueda-header div .busqueda {
-        
-        width: 50%;
-       
-        margin-top: -51px;
-        padding: 5px;
-        margin-left: 17%;
-    }
+/* The contact form */
 
-    .home header div .busqueda-header i {
-        position: absolute;
-        
-        right: 35%;
-       
-    }
+.footer-distributed form{
+	display: inline-block;
+}
 
-    .home header .iconos{
-        display: flex;
-        height: 40px;
-        width: 30%
-    }
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
 
-    .home header .iconos .icono-carrito{
-        margin-top: -51px;
-        padding: 5px;
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
 
-        margin-left: 17%;
-    }
+	width: 400px;
+	padding: 18px;
+}
 
-    .home header .iconos .icono-loguin{
-        margin-top: -51px;
-        padding: 5px;
-        margin-left: 110%;  
-    }
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 8px;
+	background-color:  var(--rosaD);
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+.footer-distributed form button:hover{
+    box-shadow: 3px 0px 30px rgb(0, 0, 0);
+    background-color: var(--celeste);
+    color: #000;
+}
+
+
+.logo__footer{
+    -webkit-animation: spin 12s linear infinite;
+    -moz-animation: spin 12s linear infinite;
+    animation: spin 12s linear infinite;
+}
+
+/*use keyframes*/
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotateY(360deg);}
+    
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotateY(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotateY(360deg);}
+}
+
+
+
+
+
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
 }
