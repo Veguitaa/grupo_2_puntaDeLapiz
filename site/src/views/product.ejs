@@ -3,38 +3,80 @@
 
     <%- include('./partials/head') %>
 
-<body class="product">
+<body class="product home">
 
     <%- include('./partials/header') %> 
 
     <main class="detalle__producto">
 
-        <section>
-            <article class="producto">
-                <img class="cart-products" src="/img/productsimg/<%= productos.imagen %> " alt="imagen producto">
-                <div class="detalle">
-                    <p>
-                        <%= productos.nombre %>
-                    </p>
-                <h3><%= productos.marca %></h3>
-                
-                <p class="precio">$ <%= productos.precio %></p>
-                <p class="diseños"><%= productos.descripcion %></p>
-                
-                <div class="agregar">
-                    <p> - 1 +</p>
-                    <a href="#">
-                        <button class="button-agregar" >AGREGAR</button>
-                    </a> 
-                </div>
-            </div>
-            </article>
-        </section>
 
-       
+
+
+
+
+    <section class="container_productDetail">
+        <div class="left-column_productDetail">
+            <img data-image="black" class="cart-products" src="/img/productsimg/<%= productos.imagen %> " alt="imagen producto">
+
+          </div>
+         
+          <!-- Right Column -->
+          <div class="right-column_productDetail">
+         
+            <!-- Product Description -->
+            <div class="product-description_productDetail">
+
+
+              
+              <span><%= productos.marca %></span>
+              <h1> <%= productos.nombre %></h1>
+              <p><%= productos.descripcion %></p>
+            </div>
+         
+            <!-- Product Configuration -->
+            <div class="product-configuration_productDetail">
+         
+     
+              <!-- Product Pricing -->
+            <div class="product-price_productDetail">
+                <span>$ <%= productos.precio %></span>
+              </div>
+
+
+             
+         
+                <div class="cable-choose_productDetail">
+                  <button class="btn_prouctDetail1">Editar</button>
+                  <button class="btn_prouctDetail2">Eliminar</button>
+                  <button class="btn_prouctDetail3">Agregar Carrito</button>
+                </div>
+             
+            </div>
+         
+            
+          </div>
+    
+    </section>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
       
     </main>
-
+    
+   
     <%- include('./partials/footer') %> 
     
 </body>

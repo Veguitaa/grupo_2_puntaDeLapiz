@@ -200,7 +200,15 @@
                         <li></li>
                         <li></li>
                     </ul> -->
-                    <button>Ver producto</button>
+                    <a href="/product/<%= producto.id %> ">
+                        <button>Ver producto</button>
+                        
+                    </a> 
+                    <a href="#">
+                       
+                        <button>Agregar Carrito</button>
+                    </a> 
+                    
             </div>
             <div class="description_product">
                 <div class="icons_product">
@@ -263,7 +271,9 @@
                                     <li></li>
                                     <li></li>
                                 </ul> -->
-                                <button>Ver producto</button>
+                                <a href="/product/<%= producto.id %> ">
+                                    <button>Ver producto</button>
+                                </a> 
                         </div>
                         <div class="description_product">
                             <div class="icons_product">
@@ -339,14 +349,6 @@
             script
         ********************************************************* -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="js/carrusel.js"></script>
-	<script src="js/carrusel_2.js"></script>
     
     <%- include('./partials/footer') %> 
 

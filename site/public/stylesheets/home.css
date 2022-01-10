@@ -482,7 +482,7 @@ CARRUSEL PRODUCTOS
 .details_product button{
     width: 100%;
     padding: 5px 0;
-    margin: 10px 0;
+    margin: 10px 0 5px;
     background: var(--celeste);
     color: #000000;
     border-radius: 5px;

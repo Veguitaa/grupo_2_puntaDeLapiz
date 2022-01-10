@@ -164,11 +164,14 @@ html{
 /* section{
     padding:2rem 9%;
 } */
-
+/* 
 section:nth-child(even){
     background:#eee;
 }
+ */
 
+
+ 
 /* .sub-heading{
     text-align: center;
     color:var(--green);

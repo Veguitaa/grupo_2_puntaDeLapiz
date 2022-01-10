@@ -1,10 +1,19 @@
-.tableProductsAdmin {
+
+.btn-newpro-adm{
+    
+    background-color: var(--rosaD);
+}
+
+
+
+.tableProductsAdmin__listPro {
     display: table;
      width: 100%; 
      background-color: var(--celeste);
      margin: 0;
      box-sizing: border-box;
      padding: 5px;
+     font-size: 12px;
 
  }
 
@@ -14,7 +23,7 @@
  
  
 
- .caption {
+ .caption__listPro {
      display: flex;
      justify-content: space-between;
      width: 100%;
@@ -22,37 +31,37 @@
      height: 55px;
      padding: 0px 10px;
      color: black;
-     font-size: 20px;
+     font-size: 30px;
      line-height: 55px;
      text-shadow: 1px 1px 1px rgba(0,0,0,.3);
      box-sizing: border-box;
  }
  
 
- .header-row {
+ .header-row__listPro {
     background-color: var(--rosaD);
      color: white;
 
  }
 
-.row {
+.row__listPro {
     display: table-row;
 
 }
 
-.cell {
+.cell__listPro {
     display: table-cell;
     padding: 6px; 
     border-bottom: 1px solid var(--rosaD);
     text-align: center;
 }
 
-.primary {
+.primary__listPro {
     text-align: left;
 }
 
 
-input[type="radio"]
+.row__listPro input[type="radio"]
 /* input[type="checkbox"] */{
     display: none;
 }
@@ -61,25 +70,36 @@ input[type="radio"]
 .action-button-delete{
     background-color: rgb(255, 0, 0);
     color: white;
+    padding: 5px;
 }
 
 .action-button-edit{
     background-color: rgb(0, 255, 85);
+    padding: 5px;
+    color: white;
 }
 
 @media only screen and (max-width: 760px)  {
 
+
+    
+.row__listPro .cell__listProimg{
+    height: 100px;
+ }
     body {
         padding: 0;
+       
     }
 
-    .tableProductsAdmin {
+    .tableProductsAdmin__listPro {
+        
         display: block;
         margin: 44px 0 0 0;
+     
     }
    
 
-   /*  .caption {
+    .captioncaption__listPro {
         position: fixed;
         top: 0;
         text-align:center;
@@ -87,21 +107,22 @@ input[type="radio"]
         line-height: 44px;
         z-index: 5;
         border-bottom: 2px solid var(--negro);
-    } */
+   
+    }
    
 
-    .row { 
+    .row__listPro { 
         position: relative;
         display: block;
         border-bottom: 1px solid  var(--rosaD); 
 
     }
 
-    .header-row {
+    .header-row__listPro {
         display: none;
     }
     
-    .cell { 
+    .cell__listPro { 
         display: block;
 
         border: none;
@@ -111,7 +132,7 @@ input[type="radio"]
         text-align: left;
     }
 
-    .primary:after {
+    .primary__listPro:after {
         content: "";
         display: block;
         position: absolute;
@@ -126,13 +147,13 @@ input[type="radio"]
 
     }
 
-    .cell:nth-of-type(n+2) { 
+    .cell__listPro:nth-of-type(n+2) { 
         display: none; 
     }
 
 
-    input[type="radio"],
-    input[type="checkbox"] {
+    .row__listPro input[type="radio"],
+    .row__listPro input[type="checkbox"] {
         display: block;
         position: absolute;
         z-index: 1;
@@ -141,26 +162,26 @@ input[type="radio"]
         opacity: 0;
     }
 
-input[type="radio"]:checked,
-    input[type="checkbox"]:checked {
+    .row__listPro input[type="radio"]:checked,
+    .row__listPro input[type="checkbox"]:checked {
       z-index: -1;
     }
 
-    input[type="radio"]:checked ~ .cell,
-    input[type="checkbox"]:checked ~ .cell {
+    .row__listPro input[type="radio"]:checked ~ .cell__listPro,
+    .row__listPro input[type="checkbox"]:checked ~ .cell__listPro {
         display: block;
 
         border-bottom: 1px solid  var(--rosa); 
     }
 
-    input[type="radio"]:checked ~ .cell:nth-of-type(n+2),
-    input[type="checkbox"]:checked ~ .cell:nth-of-type(n+2) {
+    .row__listPro input[type="radio"]:checked ~ .cell__listPro:nth-of-type(n+2),
+    .row__listPro input[type="checkbox"]:checked ~ .cell__listPro:nth-of-type(n+2) {
         
         background: #e0e0e0;
     }
 
-    input[type="radio"]:checked ~ .cell:nth-of-type(n+2):before,
-    input[type="checkbox"]:checked ~ .cell:nth-of-type(n+2):before {
+    .row__listPro input[type="radio"]:checked ~ .cell__listPro:nth-of-type(n+2):before,
+    .row__listPro input[type="checkbox"]:checked ~ .cell__listPro:nth-of-type(n+2):before {
         content: attr(data-label);
 
         display: none;
@@ -169,20 +190,20 @@ input[type="radio"]:checked,
         border-radius: 10px;
         height: 20px;
         margin-right: 10px;
-        font-size: 12px;
+        font-size: 150px;
         line-height: 20px;
         text-align: center;
         color: white;
 
     }
 
-    input[type="radio"]:checked ~ .primary,
-    input[type="checkbox"]:checked ~ .primary  {
+    .row__listPro input[type="radio"]:checked ~ .primary__listPro,
+    .row__listPro input[type="checkbox"]:checked ~ .primary__listPro  {
         border-bottom: 2px solid  var(--celeste);
     }
 
-    input[type="radio"]:checked ~ .primary:after,
-    input[type="checkbox"]:checked ~ .primary:after {
+    .row__listPro input[type="radio"]:checked ~ .primary:after,
+    .row__listPro input[type="checkbox"]:checked ~ .primary:after {
          position: absolute;
         right:18px;
         top:22px;

@@ -1,34 +1,37 @@
 <%- include('../partials/head') %>
 <body >
-<%- include('../partials/headerAdmin') %>
+<%- include('../partials/header') %>
 <main >
 
-  <section class="caption">
+  <section class="caption__listPro">
     <div><p>Mis producto</p></div>
-    <div>
-      <a href="/users/user/1"> <button>Volver a mi perfil</button></a>
-      <a href="/admin/create"><button>Crear Producto</button></a>
+    <div class="btn-newpro-adm">
+      <!-- <a href="/users/user/1"> <button>Volver a mi perfil</button></a> -->
+      <a href="/admin/create" ><button>Crear Producto</button></a>
     </div>
-  </section>	
+  </section>
+  
+  
+
   <section>
-    <div class="tableProductsAdmin" >
-      <div class="header-row row">
-        <span class="cell primary">Producto</span>
-        <span class="cell">Imagen</span>
-         <span class="cell">Precio</span>
-        <span class="cell">Detalles</span>
-        <span class="cell"> </span>
+    <div class="tableProductsAdmin__listPro" >
+      <div class="header-row__listPro row__listPro">
+        <span class="cell__listPro primary__listPro">Producto</span>
+        <span class="cell__listPro">Imagen</span>
+         <span class="cell__listPro">Precio</span>
+        <span class="cell__listPro">Detalles</span>
+        <span class="cell__listPro"> </span>
       </div>
     <% productos.forEach (producto => { %>
-      <div class="row">
-        <input class="inputout" type="radio" name="expand">
-          <span class="cell primary" data-label="Producto"><%= producto.id%>- <%= producto.nombre %></span>
-          <span class="cell" data-label="Imagen"><img class="productoAdmin__img" src="/img/productsimg/<%= producto.imagen %> " alt="imagen producto"></span>
-          <span class="cell" data-label="Precio">$ <%= producto.precio %></span>
-          <span class="cell" data-label="Detalles"><a href="/product/<%= producto.id%> ">ver más detalles</a></span>
-          <span class="cell" data-label=""><a href="/admin/edit/<%= producto.id %> "><button class="action-button-edit">Editar</button></a>
+      <div class="row__listPro">
+        <input class="inputout__listPro" type="radio" name="expand">
+          <span class="cell__listPro primary__listPro" data-label="Producto"><%= producto.id%>- <%= producto.nombre %></span>
+          <span class="cell__listPro cell__listProimg" data-label="Imagen"><img class="productoAdmin__img" src="/img/productsimg/<%= producto.imagen %> " alt="imagen producto"></span>
+          <span class="cell__listPro" data-label="Precio">$ <%= producto.precio %></span>
+          <span class="cell__listPro" data-label="Detalles"><a href="/product/<%= producto.id%> ">ver más detalles</a></span>
+          <span class="cell__listPro" data-label=""><a href="/admin/edit/<%= producto.id %> "><button class="action-button-edit"><i class="fas fa-edit"></i></button></a>
             <form action="/admin/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex" id="eliminar-producto">
-							<button type="submit" class="action-button-delete">Eliminar</button>
+							<button type="submit" class="action-button-delete"><i class="fas fa-trash-alt"></i></button>
 						</form>
           </span>
           <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
