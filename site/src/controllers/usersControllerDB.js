@@ -8,10 +8,19 @@ const db = require("../database/models")
 module.exports = {
   
       user:  (req, res,) => {
-        const {id} = req.params
-        const userData = usuariosRegistrados.find(e => e.id === + id)
-        res.render('users/user',{usuariosRegistrados, userData, products})
+        db.Usuarios.findAll()
+        .then(usuarios=> {
+          return res.render('users/user', {
+            usuarios
+          })
+        })
+          .catch((error) => res.send(error))
+  
+  
       },
+  
+
+
 
       login:  (req, res,) => {
         res.render('users/login')

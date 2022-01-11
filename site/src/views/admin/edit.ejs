@@ -23,8 +23,10 @@
 					<% if(locals.errors && errors.nombre) { %> 
 						<small> <%= errors.nombre.msg %> </small>
 					<% } %> 
-		
+					<small id="small.nombreProduct"></small>
 				</div>
+
+				
 			</div>
 
 			
@@ -42,8 +44,9 @@
 					<% if(locals.errors && errors.marca) { %> 
 						<small> <%= errors.marca.msg %> </small>
 					<% } %> 
-				
+					<small id="small.marcaProduct"></small>
 				</div>
+				
 			</div>
 
 
@@ -64,9 +67,10 @@
 				<option <%= producto.categoriaId === categoria.id ? "selected" : null %> value=<%=categoria.id%> ><%= categoria.nombre %></option>
 				<% }) %>
 			</select>
-
+			<small id="small.categoriaProduct"></small>
 					
 				</div>
+				
 			</div>
 
 			<!-- Grupo: stock -->
@@ -80,9 +84,10 @@
 						<small> <%= errors.stock.msg %> </small>
 					<% } %> 
 					
-					
+					<small id="small.stockProduct"></small>
 				
 				</div>
+				
 			</div>
 
 
@@ -96,7 +101,7 @@
 					<% if(locals.errors && errors.precio) { %> 
 						<small> <%= errors.precio.msg %> </small>
 					<% } %> 
-				
+					<small id="small.precioProduct"></small>
 				</div>
 			</div>
 
@@ -106,7 +111,7 @@
 				<label for="descuento" class="formulario__label">descuento</label>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="descuento" id="descuento" placeholder="Por Ej: 15" value="<%= producto.descuento %>">
-
+					<small id="small.descuentoProduct"></small>
 				</div>
 			</div>
 
@@ -133,8 +138,8 @@
 			<!-- Grupo: descripcion -->
 			<div class="formulario__grupo">
 				<label for="descripcion" class="formulario__label">Descripcion del producto</label>
-				<textarea class= "descripcion_producto" name="descripcion" id="descripcion" placeholder="<%= producto.descripcion %>" rows="10" ></textarea>
-					
+				<textarea class= "descripcion_producto" name="descripcion" id="descripcion" placeholder="" rows="10" ><%= producto.descripcion %></textarea>
+				<small id="small.descripcionProduct"></small>
 			  </div>
 	
 
@@ -147,13 +152,14 @@
 				
 			</div>
 		</form>
-		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-          <script src="/js/sweetedit.js"></script>
+		
 	</section>
 
 
   
 </main>
-
+<script src="/js/productCreate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          <script src="/js/sweetedit.js"></script>
 
 </body>

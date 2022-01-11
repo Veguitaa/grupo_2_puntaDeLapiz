@@ -1,6 +1,6 @@
 <%- include('../partials/head') %>
 <body >
-<%- include('../partials/headerAdmin') %>
+<%- include('../partials/header') %>
 
 
 <main class="mainformproduct">
@@ -23,8 +23,9 @@
 					<% if(locals.errors && errors.nombre) { %> 
 						<small> <%= errors.nombre.msg %> </small>
 					<% } %> 
-		
+					
 				</div>
+				<small id="small.nombreProduct"></small>
 			</div>
 
 			
@@ -43,7 +44,7 @@
 						<small> <%= errors.marca.msg %> </small>
 					<% } %> 
 				
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					<small id="small.marcaProduct"></small>
 				</div>
 			</div>
 
@@ -65,7 +66,7 @@
 					<option value="4">Estudiante</option>
 				</select>
 
-	
+				<small id="small.categoriaProduct"></small>
 				</div>
 			</div>
 
@@ -79,7 +80,7 @@
 					<% if(locals.errors && errors.stock) { %> 
 						<small> <%= errors.stock.msg %> </small>
 					<% } %> 
-					
+					<small id="small.stockProduct"></small>
 									</div>
 			</div>
 
@@ -97,8 +98,9 @@
 					<% if(locals.errors && errors.precio) { %> 
 						<small> <%= errors.precio.msg %> </small>
 					<% } %> 
-				
+					<small id="small.precioProduct"></small>
 				</div>
+				
 			</div>
 
 
@@ -115,7 +117,7 @@
 					<% if(locals.errors && errors.descuento) { %> 
 						<small> <%= errors.descuento.msg %> </small>
 					<% } %> 
-				
+					<small id="small.descuentoProduct"></small>
 				</div>
 			</div>
 
@@ -147,18 +149,20 @@
 			<!-- Grupo: descripcion -->
 			<div class="formulario__grupo">
 				<label for="descripcion" class="formulario__label">Descripcion del producto</label>
-				<textarea class= "descripcion_producto" <%= locals.errors && errors.descripcion? 'danger' : 'data' %>  name="descripcion" id="descripcion"  rows="10" value=<%= locals.old && old.descripcion ? old.descripcion : null %> ></textarea>
+				<textarea  id="descripcion" class= "descripcion_producto" <%= locals.errors && errors.descripcion? 'danger' : 'data' %>  name="descripcion" id="descripcion"  rows="10" value=<%= locals.old && old.descripcion ? old.descripcion : null %> ></textarea>
 				<br>
 				<% if(locals.errors && errors.descripcion) { %> 
 					<small> <%= errors.descripcion.msg %> </small>
 				<% } %> 
+				<small id="small.descripcionProduct"></small>
 			  </div>
+			 
 	
 
 			
 
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn">Crear</button>
+				<button type="submit" class="formulario__btn" id="enviarForm">Crear</button>
 			</div>
 
 		</form>
@@ -167,6 +171,6 @@
 
   
 </main>
-
+<script src="/js/productCreate.js"></script>
 
 </body>

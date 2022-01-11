@@ -11,11 +11,13 @@
         <h4>registro de usuario</h4>
         <div class="container">
 
-            <form action="" method="POST" enctype="multipart/form-data"   >
+            <form action="" method="POST" enctype="multipart/form-data" id="formCreat" >
 
                 <div class="input">
                     <label for="imagen"></label>
                     <input type="file" name="imagen" id="imagen">
+                    <small id="small.imagen"></small>
+                    <div id="previews"></div>
                 </div>
 
 
@@ -23,8 +25,9 @@
                     <label for="nombre"></label>
                     <input type="text" name="nombre" id="nombre" class=<%= locals.errors && errors.nombre ? 'danger' : 'data' %> placeholder="Nombre de usuario" value=<%= locals.old && old.nombre ? old.nombre : null %>>
                     <% if(locals.errors && errors.nombre) { %> 
-                        <small> <%= errors.nombre.msg %> </small>
+                        <small><%= errors.nombre.msg %> </small>
                     <% } %> 
+                    <small id="small.nombre">Algo</small>
                 </div>
 
 
@@ -34,6 +37,7 @@
                     <% if(locals.errors && errors.user_apellido) { %> 
                         <small> <%= errors.user_apellido.msg %> </small>
                     <% } %> 
+                    <small id="small.apellido"></small>
                 </div>
 
 
@@ -43,6 +47,7 @@
                     <% if(locals.errors && errors.email) { %> 
                         <small> <%= errors.email.msg %> </small>
                     <% } %> 
+                    <small id="small.email"></small>
                 </div>
 
 
@@ -52,6 +57,7 @@
                     <% if(locals.errors && errors.user_direccion) { %> 
                         <small> <%= errors.user_direccion.msg %> </small>
                     <% } %> 
+                    <small id="small.direccion"></small>
                 </div>
 
 
@@ -61,6 +67,7 @@
                     <% if(locals.errors && errors.usuario) { %> 
                         <small> <%= errors.usuario.msg %> </small>
                     <% } %> 
+                    <small id="small.usuario"></small>
                 </div>
 
 
@@ -70,23 +77,29 @@
                     <% if(locals.errors && errors.password1) { %> 
                         <small> <%= errors.password1.msg %> </small>
                     <% } %> 
+                    <small  id="small.password1"></small>
                 </div>
 
 
                 <div class="input">
                     <label for="password2"></label>
                     <input type="password" name="password2" id="password2" placeholder="Repetir Contraseña">
+                    <% if(locals.errors && errors.password2) { %> 
+                        <small > <%= errors.password2.msg %> </small>
+                    <% } %> 
+                    <small id="small.password2"></small>
                 </div>
 
 
             <div >
                 <input type="checkbox" name="terminos" id="terminos">
                 <label for="terminos">Terminos y condiciones</label>
+                <small id="small.terminos"></small>
             </div>
 
             
             <div class="submit">
-                <button type="submit">Registrarme</button>
+                <button type="submit" class="btn btn-primary" id='enviarFormulario'>Registrarme</button>
                 <!-- <input type="submit" value="Registrarse" /> -->
                 <!-- <a href="/users/register"></a> -->
               </div>
@@ -96,6 +109,7 @@
     </main>
     
     <%- include('./../partials/footer') %> 
+    <script src="/js/register.js"></script>
 
 </body>
 </html>

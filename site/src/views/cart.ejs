@@ -72,26 +72,7 @@
             </article>
         </section>
     
-          <h4 class="h4-cart" >completa tu compra</h4>
-
-          <section class="section-products">
-            <section class="section-products">
-                <% products.map (product => { %>
-                    <% if(product.category === "libreria"){%>
-                <article class="products">
-                    <img class="cart-products" src="/img/productsimg/<%= product.image %> " alt="imagen producto">
-                    <h3><%= product.mark %></h3>
-                    <p>
-                        <%= product.name %> 
-                    </p>
-                    <p class="precio">$ <%= product.price %></p>
-                    <a href="#">
-                        <button class="button-agregar" >AGREGAR</button>
-                    </a> 
-                </article>
-                <% } %>
-                <% }) %>
-                </section>
+      
     </main>
 
     <%- include('./partials/footer') %> 

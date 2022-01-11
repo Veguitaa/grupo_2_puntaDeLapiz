@@ -18,6 +18,6 @@ module.exports = [
         .isInt().withMessage('el stock debe ser un numero'),
     check('descripcion')
         .notEmpty().withMessage('se necesita una descripcion del producto').bail()
-        .isLength({ min : 15 }).withMessage('la descripcion debe contener minimo 15 caracteres')
+        .isLength({ min : 10 }).withMessage('la descripcion debe contener minimo 10 caracteres')
 
 ]
