@@ -1,0 +1,131 @@
+
+
+
+/* UTILITY */
+/* .p-small {
+    padding-bottom: 5px;
+}
+.p-medium {
+    padding-bottom: 10px;
+}
+.p-y {
+    padding: 10px 0;
+}
+.m-y {
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+} */
+
+.store-product__tienda  img {
+    border-top-right-radius: 35px;
+    width: 100%;
+}
+
+.container__tienda {
+    
+   margin-bottom: 50px;
+  
+}
+
+.tienda__tienda {
+    /* background-color: var(--celeste); */
+    padding: 10rem;
+}
+.tienda__tienda h1 {
+    font-size: 4rem;
+    line-height: 2;
+    color: var(--rosaD);
+}
+
+.form__tienda input {
+    width: 20rem;
+    padding: .7rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border-bottom: 2px solid green;
+    margin-bottom: 1rem;
+}
+
+ .btn__tienda  {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    margin: auto;
+    background-color: var(--rosa);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.active__tienda  {
+    background-color: var(--rosaD);
+}
+
+.container_tienda {
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding: 2rem 0;
+}
+
+.store-product__tienda {
+   max-width: 190px;
+}
+
+/* .store-product__tienda  {
+    border: 1px solid #eee;
+    border-radius: 50px;
+    max-width: 500px;
+} */
+
+.product-details__tienda  {
+    border-bottom-left-radius: 35px;
+    text-align: center;
+    padding: 1.5rem .5rem;
+    background-color: var(--rosa);
+   
+}
+
+.product-details__tienda  h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* text-overflow: Ellipsis; */ /* will make [...] at the end */
+    /* width: 370px; */ /* change to your preferences */
+    white-space: nowrap; /* paragraph to one line */
+    overflow:hidden;
+}
+
+.product-details__tienda  p {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    /* padding-bottom: 1rem; */
+    color: rgb(47, 0, 255);
+    /* font-weight: 700; */
+}
+
+.product-details__tienda  p span {
+    text-decoration: line-through;
+    color: red;
+    font-weight: normal;
+}
+
+.product-details__tienda  a {
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: var(--rosaD);
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+}
+
+.product-details__tienda  a:hover {
+    background-color: var(--celeste);
+    color: #000;
+}
