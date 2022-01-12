@@ -180,6 +180,8 @@ module.exports = {
     },
 
 
+    
+
     check: (req, res) => {
         if (req.session.usuarioLogueado !== undefined) {
             res.send(`El usuario logueado es ${req.session.usuarioLogueado.email}`)

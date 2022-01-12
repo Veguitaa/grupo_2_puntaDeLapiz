@@ -1,4 +1,4 @@
-const db = require("../database/models");
+/* const db = require("../database/models");
 
 const {check, body} = require("express-validator");
 const bcrypt = require("bcrypt");
@@ -23,7 +23,7 @@ module.exports = [
         })
     }),
 
-    body("pass")
+    body("password1")
     .custom(function(value, {req}){
 
         return db.Usuario.findOne({
@@ -31,8 +31,8 @@ module.exports = [
                 email: req.body.email
             }
         })
-        .then(User => {
-            if(!bcrypt.compareSync(value, User.dataValue.password)){
+        .then(Usuario => {
+            if(!bcrypt.compareSync(value, Usuario.dataValue.contraseña)){
                 return Promise.reject()
             }
         })
@@ -40,4 +40,4 @@ module.exports = [
             return Promise.reject("Contraseña incorrecta")
         })
     })
-]
+] */

@@ -6,6 +6,7 @@ const { user, login, register, processRegister, processLogin, check, logout } = 
 
 
 const validate = require('../validations/validateRegister')
+const validateLogin = require('../validations/validateLogin')
 const guestUser = require('../middlewares/guestUser')
 const upload = require('../middlewares/multerUser')
 
@@ -18,7 +19,7 @@ router.get('/register', guestUser, register)
 router.post('/register', upload.single("imagen"), /* validate, */ processRegister)
 
 router.get('/login', guestUser, login)
-router.post('/login', processLogin)
+router.post('/login',/* validateLogin, */ processLogin)
 
 
 router.get('/logueado', check)
