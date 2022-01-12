@@ -18,31 +18,26 @@ module.exports = {
       .catch((error) => res.send(error))
     },
 
-    search: (req, res) => {
+    
+  search: (req, res) => {
+    productos = db.Productos.findAll({
+        where: {
+            [Op.or]: [
+                { nombre: { [Op.substring]: req.query.search} },
+                { descripcion: { [Op.substring]: req.query.search } },
+            ],
+        },
+    });
+    Promise.all([productos]).then(([productos]) => {
+        res.render("search", {
+            productos,
+            title: "Busqueda:",
+            search: req.query.search,
+        });
+    });
+},
 
-      let busqueda = req.query.busqueda.toLowerCase()
-      let categories = db.Categorias.findAll()
-      let productos = db.Productos.findAll({
-          include: [{
-              all: true
-          }],
-          where: {
-              [Op.or]: [
-                  { nombre: { [Op.substring]: `%${busqueda}%` } },
-                  { marca: { [Op.substring]: `%${busqueda}%` } },
-              ],
-          }
-      })
-      Promise.all([categories,productos])
-      .then(([categories,productos]) => {
 
-          return res.render('search', {
-              productos,
-              categories
-          })
-      })
-      .catch(error => console.log(error))
-  },
 
   about:  (req, res,) => {
     res.render('about')

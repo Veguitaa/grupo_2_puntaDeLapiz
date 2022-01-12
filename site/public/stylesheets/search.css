@@ -1,0 +1,14 @@
+.sinResultados{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sinResultados h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sinResultados img{
+    width: 150px;
+}

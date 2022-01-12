@@ -8,41 +8,73 @@
         <%- include('./partials/header') %>
 
             <main>
-                <h1>Resultado de la busqueda</h1>
+               
 
-                <h2 id="total-productos">Total de productos encontrados: <%= productos.length %></h2>
+                    <section class="tienda__tienda">
+                        <section>
+                            <div class="container__tienda">
+                                <h1><%= title %> <%= search %> </h1>
+                               
+                            </div>
+                        </section>
+                        
+                      
+                            <div class="slide-container">
+                            <section class="container_tienda" id="store-products">
+                                <% productos.forEach (producto => { %>
+                            <div class="store-product__tienda  <%= producto.categoriaId%>">
+                                <img src="/img/productsimg/<%= producto.imagen %> " alt="">
+                                <div class="product-details__tienda ">
+                                    <h2><%= producto.nombre %></h2>
+                                    <p> <span></span> $ <%= producto.precio %></p>
+                                    <a href="#">carrito</a>
+                                    <a href="/product/<%= producto.id %> ">detalles</a>
+                                </div>
+                            </div>
+                            <% }) %>
+                        </section>
+                
+                
+                    </div>
 
-                <% if (!productos.length) { %>
 
-                    <section>
-                       <!--  <div class="image">
-                            <img src="https://j.gifs.com/ygdY27.gif" alt="">
-                        </div> -->
-                        <article>
-                            <h2>No se encontraron resultados!</h2>
-                        </article>
-                    </section>
+                    <% if (!productos.length) { %>
+                        
+                            <section class="sinResultados">
+                               
+                                <div class="data">
+                                    <h2 class="dont">No se encontraron resultados!</h2>
+                                </div>
 
-                <% }else{ %>
-
-                <section>
-                    <% productos.forEach(producto => { %>
-                        <a href="/product/detail/<%= producto.id %>">
-                        <!--     <%- include('./partials/cards',{
-                              producto: producto,
-                              name: producto.nombre,
-                              price: producto.precio,
-                              stock:producto.stock,
-                              description: producto.descripcion,
-                             /*  categoria : producto.category.name, */       
-                            }) %>  -->
-                        </a>
-                      <% }) %>
+                                <div class="image">
+                                    <img src="/img/sin_resultados.jpg" alt="">
+                                </div>
+                            </section>
+                       
+                        <% } %>
                 </section>
 
-                <% } %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    
+                   
+        
+             
             </main>
 
-            <%- include('./partials/footer') %>
     </body>
 </html>
