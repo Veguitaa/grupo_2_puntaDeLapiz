@@ -41,6 +41,10 @@ module.exports = {
 
   about:  (req, res,) => {
     res.render('about')
+  },
+
+  faq:  (req, res,) => {
+    res.render('faq')
   }
 
 

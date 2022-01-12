@@ -1,9 +1,14 @@
-
-.btn-newpro-adm{
-    
-    background-color: var(--rosaD);
+.section__admin{
+    padding: 50px;
 }
 
+.btn__create{
+    background-color: var(--rosaD);
+    color: #fff;
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 8px;
+}
 
 
 .tableProductsAdmin__listPro {
@@ -35,6 +40,7 @@
      line-height: 55px;
      text-shadow: 1px 1px 1px rgba(0,0,0,.3);
      box-sizing: border-box;
+     margin-bottom: 50px;
  }
  
 

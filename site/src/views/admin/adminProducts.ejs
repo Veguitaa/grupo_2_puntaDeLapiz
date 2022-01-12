@@ -3,11 +3,14 @@
 <%- include('../partials/header') %>
 <main >
 
+  
+<section class="section__admin">
   <section class="caption__listPro">
     <div><p>Mis producto</p></div>
     <div class="btn-newpro-adm">
-      <!-- <a href="/users/user/1"> <button>Volver a mi perfil</button></a> -->
-      <a href="/admin/create" ><button>Crear Producto</button></a>
+     
+      <!-- <a href="/admin/create" ><button>Crear Producto</button></a> -->
+      <button class="btn__create" type="submit" onclick="location.href='/admin/create'">Crear Producto</button>
     </div>
   </section>
   
@@ -40,7 +43,7 @@
       <% }) %>
     </div>
   </section>
-
+</section>
 </main>
 
 
