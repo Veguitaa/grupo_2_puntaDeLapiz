@@ -1,12 +1,13 @@
 <header class="header">
 
-    
-    <a href="#" class="logo"><img src="img/logo2.png" alt=""></a>
+   
+    <a href="/" class="logo"><img src="img/logo2.png" alt=""></a>
+
 
     <nav class="navbar">
         <a class="active" href="/">Home</a>
         <a href="/tienda">Tienda</a>
-        <a href="#about">Conocenos</a>
+        <a href="/about">Conocenos</a>
         <a href="#menu">Blog</a>
     </nav>
 
@@ -17,36 +18,68 @@
         <!-- user modal -->
 
         <button class="btn_modal_user" id="open">
+            <% if (!(locals.user)) {%> 
             <a href="#" class="fas fa-user"></a>
+            <% } else { %> 
+            <a href="#" class="fas fa-cog"></a>
+            <% } %> 
           </button>
+
+            <!-- MODAL -->
+
+
           <div id="modal_container" class="modal-container">
             <div class="modal_user">
-
+                
                 <img src="img/logo.png" alt="">
+           <div class="btnOpcion__modal">
+                <% if (!(locals.user)) {%> 
+
               <div class="user_etiqt_a">
-                  <a href="/users/login">iniciar secion</a>
+                  <button class="btn__close__user btnHeader1" onclick="location.href='/users/login'"> Iniciar secion</button>
+                 
               </div>
               <div class="user_etiqt_a">
-                  <a href="/users/register">registrarse</a>
+                  <button  class="btn__close__user btnHeader2" onclick="location.href='/users/register'">registrarse</button>
+            
               </div>
-              <button class="btn__close__user" id="close_user">Cerrar</button>
+              <% } else { %> 
+
+                <div class="user_etiqt_a">
+
+                    <button class="btn__close__user btnHeader1" onclick="location.href='/users/user/1'">Perfil</button>
+                    
+                </div>
+
+                <div class="user_etiqt_a">
+                <form action="/users/logout" method="GET"> <button class="btn__close__user btnHeader2" type="submit"> Cerrar sesión</button> </form>
+            </div>
+              <% } %> 
+
+            <div class="user_etiqt_a">
+              <button class="btn__close__user btnHeader3" id="close_user">Cerrar</button>
+            </div>
             </div>
           </div>
-        
+        </div>
 
         <a href="#" class="fas fa-shopping-cart"></a>
     </div>
-
-    <form action="" id="search-form">
-        <input type="search" placeholder="buscar producto" name="" id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
+<div>
+    <form action="/product/search" id="search-form" method="GET" >
+        <!-- <button class="btn_search" type="submit" id="search-box" >buscar producto</button> -->
+        <input type="search" placeholder="buscar producto" name="" id="search-box" placeholder="buscar producto">
+        <label for="search-box" class="fas fa-search btn_search"></label>
+    
         <i class="fas fa-times" id="close"></i>
     </form>
+</div>
 
 
 
 <script src="js/header.js"></script>
 <script src="js/modalUsers.js"></script>
+<script src="js/search.js"></script>
 </header>
 
 

@@ -1,118 +1,111 @@
 
-/* 
-*********************************************************
-MAIN
-*********************************************************
-*/
-.login main{
- height: 258px;
- background-color: var(--celeste);
+/* body{
+ 
+  overflow: hidden;
+} */
+::selection{
+  background: rgba(26,188,156,0.3);
 }
-
-
-.login main .container {
-    height: 192px;
-    width: 81%;
-    background-color: var(--blanco);
-    border-radius: 10px;
-    margin: 0 auto;
-    display:flex;
-    flex-direction: column;
-    justify-content: center ;
-    align-items: center;
+.container__login{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
 }
-
-.login main .container  .ingreso1{
-    background-color: var(--rosa);
-    width: 80%;
-    padding: 4px;
-    border-radius: 5px;
-    margin: 18px 10px -4px 26px;
-    border: solid 1px var(--negro);
+.wrapper__login{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
 }
-
-.login main .container  .ingreso2{
-    background-color: var(--rosa);
-    width: 80%;
-    padding: 4px;
-    border-radius: 5px;
-    margin: 18px 10px -4px 26px;
-    border: solid 1px var(--negro);
+.wrapper__login .title__login{
+  height: 90px;
+  background: var(--rosaD);
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.login main .container .checkbox{
-     display: flex;
-    flex-direction: row;
-    padding-top: 16px
+.wrapper__login form{
+  padding: 30px 25px 25px 25px;
 }
-.login main .container input{
-  padding-right: 3px;
-   
+.wrapper__login form .row__login{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
 }
-
-
-.login main .container .bottom a{
-    display: inline-block;
-    border-radius: 4px;
-    width: 118px;
-    padding: 5px;
-    margin: 8px 26px;
-    background-color: var(--rosa);
-    color: var(--negro);
-    text-align: center;
-    font-weight: 1000;
-    border: solid 1px var(--negro);
+.wrapper__login form .row__login input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
-
- /* 
-*******************************************
-MEDIA QUERIS
-********************************************
- */
- @media(min-width: 481px){
-    
-    
-    /* MAIN */
-    .login main {
-        height: 323px;
-        
-    }
-
-    .login main h4 {
-        padding-top: 39px;
-    }
-    .login main .container {
-        height: 192px;
-        width: 51%;
-        margin: 0 auto;
-    }
-    .login main .container div .ingreso1{
-        margin-top: 27px;
-    }
-
- }
-
- @media(min-width:1280px){
-        /* MAIN */
-        .login main {
-            height: 380px;
-        }
-        .login main h4 {
-            padding-top: 39px;
-        }
-        .login main .container {
-            height: 232px;
-            width: 51%;
-            margin: 0 auto;
-        }
-    .login main .container div .ingreso1{
-        margin-top: 48px;
-        width: 84%;
-    }
-    .login main .container div .ingreso2 {
-        
-        width: 84%;
-        padding: 4px;
-        border-radius: 10px;
-        margin: 18px 10px -4px 26px;
-    }
+form .row__login input:focus{
+  border-color: #1700e6;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row__login input::placeholder{
+  color: #999;
+}
+.wrapper__login form .row__login i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: var(--rosaD);
+  border: 1px solid #000000;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper__login form .pass__login{
+  margin: -8px 0 20px 0;
+}
+.wrapper__login form .pass__login a{
+  color: var(--rosaD);
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper__login form .pass__login a:hover{
+  text-decoration: underline;
+}
+.wrapper__login form .button__login input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: var(--rosaD);
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+form .button__login input:hover{
+  background: var(--celeste);
+  color: #000000;
+}
+.wrapper__login form .signup-link__login,.signup-link__login2{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper__login form .signup-link__login a{
+  color: var(--rosaD);
+  text-decoration: none;
+}
+form .signup-link__login a:hover{
+  text-decoration: underline;
+}
+.wrapper__login form .signup-link__login2 a{
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+form .signup-link__login2 a:hover{
+  text-decoration: underline;
 }

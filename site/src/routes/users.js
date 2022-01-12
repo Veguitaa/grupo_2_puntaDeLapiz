@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
+
+
 const { user, login, register, processRegister, processLogin, check, logout } = require('../controllers/usersControllerDB')
+
+
 const validate = require('../validations/validateRegister')
 const guestUser = require('../middlewares/guestUser')
 const upload = require('../middlewares/multerUser')
@@ -10,7 +14,7 @@ const upload = require('../middlewares/multerUser')
 
 router.get('/user/:id/', user);
 
-router.get('/register', /* guestUser */ register)
+router.get('/register', guestUser, register)
 router.post('/register', upload.single("imagen"), /* validate, */ processRegister)
 
 router.get('/login', guestUser, login)

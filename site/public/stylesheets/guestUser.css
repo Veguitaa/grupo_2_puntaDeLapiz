@@ -1,0 +1,50 @@
+.gurestUser{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0px 300px;
+}
+
+
+.gurestUser h1{
+    font-size: 2.5rem;
+}
+
+.gurestUser img{
+   
+    width: 30rem;
+}
+
+
+/* .gurestUser .btn__guest{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.btn__guest .btn__ge{
+    display: flex;
+    background-color: var(--rosaD);
+    margin: 10px;
+    width: 120px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+
+.btn__guest .b2{
+    background-color: var(--rosa);
+    color: #000;
+}
+
+.btn__guest .b3{
+    background-color: red;
+   
+}
+
+.btn__guest .b1:hover,.btn__guest .b2:hover,.btn__guest .b3:hover{
+    background-color: blue;
+    color: #fff;
+}

@@ -1,5 +1,4 @@
-const fs = require('fs')
-const path = require('path')
+
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const db = require("../database/models")
@@ -7,19 +6,39 @@ const db = require("../database/models")
 
 module.exports = {
   
-      user:  (req, res,) => {
-        db.Usuarios.findAll()
-        .then(usuarios=> {
-          return res.render('users/user', {
-            usuarios
-          })
-        })
-          .catch((error) => res.send(error))
-  
-  
-      },
-  
+      user:  (req, res,) =>  {
+        /* db.Usuarios.findAll({
+          include : [{all:true}]
+         })
+         .then(usuario =>{
+           return res.render('users/user',{
+             usuario
+         })
+         })
+         .catch((error) => res.send(error))
 
+ */
+
+         db.Usuarios.findByPk(req.params.id,{
+            include : [{all:true}]
+           })
+                .then(usuario =>{
+                    return res.render("users/user",{
+                        usuario
+                })
+                })
+                .catch(error => console.log(error))
+        
+        
+
+
+      },
+
+      
+     
+
+
+  
 
 
       login:  (req, res,) => {
@@ -38,60 +57,89 @@ module.exports = {
 
 
       processRegister: (req, res) => {
-        const errors = validationResult(req)
+        
 
-        if(req.fileValidationError){
 
-            let image = {
-                param: "image",
-                msg: req.fileValidationError
-            }
-            errors.errores.push(image)
-        }
 
-        if (errors.isEmpty()) {
-            
 
+
+
+        let errores = validationResult(req);
+
+        if (errores.isEmpty()) {
             const {nombre, apellido, email, password1, direccion, usuario} = req.body
-            
-            db.Usuarios.create({
-                nombre,
-                apellido,
-                email,
-                contraseña: bcrypt.hashSync(password1.trim(),10),
-                direccion,
-                usuario,
-                avatar: req.file.filename?req.file.filename:"imagenpordefecto.jpg",
-                rolId: 2
+          
+    
+          db.Usuarios.create({
+            nombre,
+            apellido,
+            email,
+            contraseña:bcrypt.hashSync(password1.trim(),10),
+            direccion,
+            usuario,
+            avatar: req.file.filename?req.file.filename:'default-image.png',
+            rolId: 2
 
-            })
-
-            .then(usuario => {
-                req.session.userLogin = {
+        })
+            .then((usuario) => {
+                req.session.usuarioLogueado = {
                     id: usuario.id,
                     nombre: usuario.nombre,
                     avatar: usuario.avatar,
                     rol: usuario.rolId
-                }
-                if(recordar){
-                    res.cookie("PuntaDeLapiz", req.session.userLogin, {
-                        maxAge: 1000* 60 *60
-                    })
-                }
-                return res.redirect("users/profile")
+              };
+              return res.redirect("/");
             })
-
-            .catch(error => {
-                res.send(error)
-            })
-
-
+            .catch((error) => console.log(error));
         } else {
-            
-            res.render('users/register',  {errors: errors.mapped(), old: req.body})
+          return res.render("user/register", {
+            errores: errores.mapped(),
+            old: req.body,
+          });
         }
+        res.redirect("/users/login");
+
+
+
+
+
+
+
+
+
+
     },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
     processLogin: (req, res) => {
 
@@ -107,18 +155,18 @@ module.exports = {
                 }
             })
             .then(usuario => {
-                req.session.userLogin = {
+                req.session.usuarioLogueado = {
                     id: usuario.id,
                     nombre: usuario.nombre,
                     avatar: usuario.avatar,
                     rol: usuario.rolId
                 }
                 if(recordar){
-                    res.cookie("PuntaDeLapiz", req.session.userLogin, {
+                    res.cookie("PuntaDeLapiz", req.session.usuarioLogueado, {
                         maxAge: 1000* 60 *60
                     })
                 }
-                return res.redirect("users/profile")
+                return res.redirect(`/users/user/${usuario.id}`)
             })
             .catch(error => {
                 res.send(error)

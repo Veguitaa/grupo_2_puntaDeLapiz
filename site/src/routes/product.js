@@ -1,11 +1,14 @@
 var express = require('express');
 var router = express.Router();
-const { product } = require('../controllers/productController')
-const authUser = require('../middlewares/authUser')
+const { product, destroy } = require('../controllers/productController')
+
+
 
 
 /* GET home page. */
-router.get('/:id/', /* authUser, */ product);
+router.get('/:id/', product);
+
+router.delete('/:id/', destroy);
 
 
 module.exports = router;

@@ -1,0 +1,134 @@
+
+.body_about{
+    font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#03a9f4, #03a9f4 45%, #fff 45%, #fff 100%);
+}
+
+.card_about {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.img_about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(30px) scale(0.5);
+  transform-origin: top;
+}
+
+.img_about img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content_about {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.content_about .detail_about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.content_about .detail_about h2 {
+  color: #444;
+  font-size: 1.6em;
+  font-weight: bolder;
+}
+
+.content_about .detail_about h2 span {
+  font-size: 0.7em;
+  color: #03a9f4;
+  font-weight: bold;
+}
+
+.sci_about {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+
+.sci_about li {
+  list-style: none;
+  margin: 4px;
+}
+
+.sci_about li a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.5em;
+  color: #444;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.5s;
+}
+
+.sci_about li a:hover {
+  background: #03a9f4;
+  color: #fff;
+}
+
+
+.imagenes_about{
+    background-color: #fff;
+    padding-top: 50px;
+}
+
+
+.imagenes_about .meme_about{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50x;
+}
+
+.auspiciantes__about{
+    margin-top: 150px;
+    padding-bottom: 150px;
+    
+}
+.auspiciantes__about h6{
+    display: flex;
+    font-size: 30px;
+    margin-bottom: 80px;
+    justify-content: center;
+}
+
+.auspiciantes__about .auspiciantes{
+
+    display: flex;
+    justify-content: space-around;
+}

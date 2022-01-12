@@ -1,32 +1,7 @@
 
-/* 
-.mainAdmin html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    line-height: 1.4;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.mainAdmin body{
-    color: #404040;
-    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
-}
- */
 .mainAdmin{
     padding-bottom: 50px;
 }
-
-
-
 
 
 
@@ -48,7 +23,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background: linear-gradient(#B873FF, transparent);
+    background: linear-gradient(var(--rosa), transparent);
     margin-bottom: 1.25rem;
 }
 
@@ -57,7 +32,7 @@
     position: relative;
     width: 90%;
     height: 17rem;
-    background: linear-gradient(45deg, #BC3CFF, #317FFF);
+    background: linear-gradient(45deg, var(--rosaD), var(--celeste));
     border-radius: 0 0 20px 20px;
 }
 
@@ -139,12 +114,19 @@
     background-color: #fff;
     border-radius: 15px;
     width: 100%;
+    justify-content: center;
+    
 }
 
 .perfil-usuario-footer .lista-datos{
     display: flex;
-    padding-left: 50px;
+   /*  padding-left: 70px; */
     flex-direction: column;
+    font-size: 15px;
+}
+
+.perfil-usuario-footer .lista-datos .icono{
+    padding-bottom: 15px;
 }
 
 .seccion-perfil-usuario .perfil-usuario-bio {
@@ -203,8 +185,12 @@
 }
 
 .seccion-perfil-usuario .boton-redes.instagram {
-    background: linear-gradient(45deg, #FF2DFD, #40A7FF);
+    background: linear-gradient(45deg, #f80000, #40A7FF);
 }
+
+
+
+
 
 /* adactacion a dispositivos */
 @media (max-width: 750px) {
@@ -238,50 +224,6 @@
 
 
 
-
-
-
-/* .adminInfo{
-
-    display: flex;
-    padding: 50px;
-    
-
-}
-
-.articleAdminUser{
-    width: 20%;
-    text-align: center;
-}
-.articleAdminUser img{
-    border-radius: 150px;
-    width: 200px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.itemDescription li{
-    margin: 10px 0px;
-}
-
-.articleAdminInfo{
-    width: 80%;
-    padding-left: 20%;
-    padding-top: 50px;
-
-}
-
-@media(max-width: 600px){
-    .adminInfo{
-        flex-direction: column;
-       
-    }
-    .userNameInfo{
-        text-align: center;
-    }
-    
-  }
- */
 
 
 

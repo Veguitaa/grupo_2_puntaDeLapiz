@@ -1,17 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+    
+    <%- include('./../partials/head') %> 
 
-    <%- include('./../partials/head') %>
+<body class="home">
 
- <body class="register">
 
-    <%- include('./../partials/header') %>
+    <main >
+     
+        <section class="form-register">
+            <h4>Formulario Registro</h4>
+            <form action="" method="POST" enctype="multipart/form-data" id="formCreat" > 
 
-    <main>
-        <h4>registro de usuario</h4>
-        <div class="container">
 
-            <form action="" method="POST" enctype="multipart/form-data" id="formCreat" >
+           <!-- Nombre -->
+            <input type="text" name="nombre" id="nombre"  class= "controls" <%= locals.errors && errors.nombre ? 'danger' : 'data' %> placeholder="Nombre" value=<%= locals.old && old.nombre ? old.nombre : null %>>
+            <% if(locals.errors && errors.nombre) { %> 
+                <small><%= errors.nombre.msg %> </small>
+            <% } %> 
+            <small id="small.nombre"></small>
+
+
+            <!-- Apellido -->
+           
+            <label for="apellido"></label>
+            <input type="text" name="apellido" id="apellido" class="controls" <%= locals.errors && errors.user_apellido ? 'danger' : 'data' %> placeholder="Apellido" value=<%= locals.old && old.user_apellido ? old.user_apellido : null %>>
+            <% if(locals.errors && errors.user_apellido) { %> 
+                <small> <%= errors.user_apellido.msg %> </small>
+            <% } %> 
+            <small id="small.apellido"></small>
+
+
+                <!-- Usuario -->
+
+                <label for="usuario"></label>
+                    <input type="text" name="usuario" id="usuario" class="controls"<%= locals.errors && errors.usuario ? 'danger' : 'data' %> placeholder="Nombre de usuario" value=<%= locals.old && old.usuario ? old.usuario : null %>>
+                    <% if(locals.errors && errors.usuario) { %> 
+                        <small> <%= errors.usuario.msg %> </small>
+                    <% } %> 
+                    <small id="small.usuario"></small>
+
+                <!-- Email -->
+            <label for="email"></label>
+            <input type="email" name="email" id="email" class="controls" placeholder="Email"  value=<%= locals.old && old.email ? old.email : null %>>
+            <% if(locals.errors && errors.email) { %> 
+                <small> <%= errors.email.msg %> </small>
+            <% } %> 
+            <small id="small.email"></small>
+
+
+            <!-- direccion -->
+
+            <label for="direccion"></label>
+            <input type="text" name="direccion" id="direccion" class= "controls" <%= locals.errors && errors.user_direccion ? 'danger' : 'data' %> placeholder="Domicilio" value=<%= locals.old && old.user_direccion ? old.user_direccion : null %>>
+            <% if(locals.errors && errors.user_direccion) { %> 
+                <small> <%= errors.user_direccion.msg %> </small>
+            <% } %> 
+            <small id="small.direccion"></small>
+
+                <!-- Contraseña -->
+
+            <label for="password1"></label>
+            <input type="password" name="password1" id="password1" placeholder="Contraseña" class="controls">
+            <% if(locals.errors && errors.password1) { %> 
+                <small> <%= errors.password1.msg %> </small>
+            <% } %> 
+            <small  id="small.password1"></small>
+
+
+            <!-- Contraseña2 -->
+
+            <label for="password2"></label>
+            <input type="password" name="password2" id="password2" placeholder="Repetir Contraseña" class="controls">
+            <% if(locals.errors && errors.password2) { %> 
+                <small > <%= errors.password2.msg %> </small>
+            <% } %> 
+            <small id="small.password2"></small>
+
+            <div>
+				<script>
+					var loadFile = function(event) {
+					  var output = document.getElementById('output');
+					  output.src = URL.createObjectURL(event.target.files[0]);
+					};
+				  </script>
+				</div>
+
 
                 <div class="input">
                     <label for="imagen"></label>
@@ -21,95 +95,22 @@
                 </div>
 
 
-                <div class="input">
-                    <label for="nombre"></label>
-                    <input type="text" name="nombre" id="nombre" class=<%= locals.errors && errors.nombre ? 'danger' : 'data' %> placeholder="Nombre de usuario" value=<%= locals.old && old.nombre ? old.nombre : null %>>
-                    <% if(locals.errors && errors.nombre) { %> 
-                        <small><%= errors.nombre.msg %> </small>
-                    <% } %> 
-                    <small id="small.nombre">Algo</small>
-                </div>
+            <input type="checkbox" name="terminos" id="terminos">
+            <label for="terminos"> Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></label>
+            <small id="small.terminos"></small>
+
+            <button type="submit" class="botons" id='enviarFormulario'>Registrarme</button>
+            <!-- <input type="submit" value="Registrarse" /> -->
+            <!-- <a href="/users/register"></a> -->
+            <p><a href="/users/login">Ya tengo Cuenta</a></p>
 
 
-                <div class="input">
-                    <label for="apellido"></label>
-                    <input type="text" name="apellido" id="apellido" class=<%= locals.errors && errors.user_apellido ? 'danger' : 'data' %> placeholder="Apellido de usuario" value=<%= locals.old && old.user_apellido ? old.user_apellido : null %>>
-                    <% if(locals.errors && errors.user_apellido) { %> 
-                        <small> <%= errors.user_apellido.msg %> </small>
-                    <% } %> 
-                    <small id="small.apellido"></small>
-                </div>
-
-
-                <div class="input">
-                    <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Ingrese su email"  value=<%= locals.old && old.email ? old.email : null %>>
-                    <% if(locals.errors && errors.email) { %> 
-                        <small> <%= errors.email.msg %> </small>
-                    <% } %> 
-                    <small id="small.email"></small>
-                </div>
-
-
-                <div class="input">
-                    <label for="direccion"></label>
-                    <input type="text" name="direccion" id="direccion" class=<%= locals.errors && errors.user_direccion ? 'danger' : 'data' %> placeholder="Direccion de usuario" value=<%= locals.old && old.user_direccion ? old.user_direccion : null %>>
-                    <% if(locals.errors && errors.user_direccion) { %> 
-                        <small> <%= errors.user_direccion.msg %> </small>
-                    <% } %> 
-                    <small id="small.direccion"></small>
-                </div>
-
-
-                <div class="input">
-                    <label for="usuario"></label>
-                    <input type="text" name="usuario" id="usuario" class=<%= locals.errors && errors.usuario ? 'danger' : 'data' %> placeholder="Ingrese su nombre de usuario" value=<%= locals.old && old.usuario ? old.usuario : null %>>
-                    <% if(locals.errors && errors.usuario) { %> 
-                        <small> <%= errors.usuario.msg %> </small>
-                    <% } %> 
-                    <small id="small.usuario"></small>
-                </div>
-
-
-                <div class="input">
-                    <label for="password1"></label>
-                    <input type="password" name="password1" id="password1" placeholder="Contraseña">
-                    <% if(locals.errors && errors.password1) { %> 
-                        <small> <%= errors.password1.msg %> </small>
-                    <% } %> 
-                    <small  id="small.password1"></small>
-                </div>
-
-
-                <div class="input">
-                    <label for="password2"></label>
-                    <input type="password" name="password2" id="password2" placeholder="Repetir Contraseña">
-                    <% if(locals.errors && errors.password2) { %> 
-                        <small > <%= errors.password2.msg %> </small>
-                    <% } %> 
-                    <small id="small.password2"></small>
-                </div>
-
-
-            <div >
-                <input type="checkbox" name="terminos" id="terminos">
-                <label for="terminos">Terminos y condiciones</label>
-                <small id="small.terminos"></small>
-            </div>
-
-            
-            <div class="submit">
-                <button type="submit" class="btn btn-primary" id='enviarFormulario'>Registrarme</button>
-                <!-- <input type="submit" value="Registrarse" /> -->
-                <!-- <a href="/users/register"></a> -->
-              </div>
-
-            </form>
-        </div>
+        </form>
+          </section>
     </main>
-    
-    <%- include('./../partials/footer') %> 
     <script src="/js/register.js"></script>
+    
 
 </body>
+
 </html>

@@ -5,45 +5,59 @@
 
 <body class="login">
 
-    <%- include('./../partials/header') %>
+
   
 <main>
 
-    <h4>Iniciar sesión</h4>
-
-    <div class="container">
+  
+    <div class="container__login">
+      <div class="wrapper__login">
+        <div class="title__login"><span>inicio sesion</span></div>
         <form action="/users/login" method="POST">
-            <div>
-                <label for="email"></label>
-                <input class="ingreso2" type="email" name="email" id="email" placeholder="Email">
-            </div>
-            
-            <div>
-                <label for="password1"></label>
-                <input class="ingreso2" type="password" name="password1" id="password1" placeholder="Contraseña">
-            </div>
 
-            <div class=checkbox>
+
+
+          <div class="row__login">
+            <i class="fas fa-user"></i>
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="Email">
+          </div>
+
+
+
+
+          <div class="row__login">
+            <i class="fas fa-lock"></i>
+            <label for="password1"></label>
+            <input  type="password" name="password1" id="password1" placeholder="Contraseña" > 
+          </div>
+
+
+          <div class="pass__login"><a href="#">Olvidaste tu contraseña?</a></div>
+
+          <div class="row__login button__login">
+            <input type="submit" value="Login">
+          </div>
+          <div class="remember">
                 
-                <input  type="checkbox" name="Recordarme" >
-                <label for="Recordarme">Recordarme</label>
+                <input class="remembercheck" type="checkbox" name="remember" id="remember">
+                <label for="remember">RECUERDAME</label>
             </div>
-            <% if (locals.errors && errors.msg) { %> 
-                <small> <%= errors.msg %>  </small>
-                <% } %> 
 
 
-            <div>
-                <button class="bottom" type="submit">Ingresar</button>
-            </div>
-            
+
+          <div class="signup-link__login">no tenes cuenta? <a href="/users/register">Registrate</a></div>
+          <div class="signup-link__login2"><a href="/">Salir</a></div>
+
+
+
         </form>
-
+      </div>
     </div>
+
+
   
 </main>
-
-    <%- include('./../partials/footer') %>
 
 </body>
 </html>

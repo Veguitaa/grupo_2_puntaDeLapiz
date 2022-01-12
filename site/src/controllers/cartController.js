@@ -10,5 +10,8 @@ module.exports = {
     cart:  (req, res,) => {
       products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('cart', {products})
+      },
+      checkout:  (req, res,) => {
+        res.render('checkout')
       }
 }

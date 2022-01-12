@@ -14,7 +14,8 @@ const usersRouter = require('./routes/users');
 const productRouter = require('./routes/product');
 const cartRouter = require('./routes/cart');
 const adminRouter = require('./routes/admin');
-const tiendaRouter = require('./routes/tienda')
+const tiendaRouter = require('./routes/tienda');
+
 
 const app = express();
 

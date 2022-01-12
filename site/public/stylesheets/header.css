@@ -39,41 +39,57 @@
 
 
 
-/* @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-* {
-  box-sizing: border-box;
-}
- */
-/* body {
-  background-color: #edeef6;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-} */
+
 .btn__close__user {
-  background-color: var(--rosaD);
   border: 0;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #fff;
   font-size: 14px;
   padding: 10px 25px;
+  margin: 5px 0px;
+  width: 50%;
 }
 
 
 .btn__close__user {
-  background-color: var(--rosaD);
   border: 0;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #fff;
   font-size: 14px;
   padding: 10px 25px;
+ 
 }
+
+
+.btnHeader1{
+    background-color: rgb(0, 187, 25);
+}
+.btnHeader2{
+    background-color: var(--rosaD);
+}
+.btnHeader3{
+    background-color: rgb(255, 0, 0);
+}
+
+.btnHeader1:hover,
+.btnHeader2:hover,
+.btnHeader3:hover{
+    background-color: var(--rosa);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
 
 .btn_modal_user{
     background: none;
@@ -123,6 +139,14 @@
    
    
 }
+
+
+.btnOpcion__modal{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 
 /* .user_etiqt_a a{
     

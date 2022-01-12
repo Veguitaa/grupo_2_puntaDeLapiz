@@ -5,13 +5,34 @@
 
  <body class="register">
 
-    <%- include('./../partials/header') %>
+   
 
     <main>
 
-        <h1>Esta página es solo para usuarios logueados</h1>
+
+        <section class="gurestUser">
+
+            <div>
+                <h1>Esta página es solo para usuarios logueados</h1>
+            </div>
+
+            <div>
+                <img src="/img/lapiz_stop.jpg" alt="">
+            </div>
+
+            <div class="btn__guest">
+                <a href="/users/login"><button class="btn__ge b1"> inicia sesion </button></a>
+                <a href="/users/register"><button class="btn__ge b2"> crear cuenta </button></a>
+                <a href="/"><button class="btn__ge b3"> salir </button></a>
+
+            </div>
+
+
+        </section>
+
+        
     </main>
-    <%- include('./../partials/footer') %> 
+  
 
 </body>
 </html>

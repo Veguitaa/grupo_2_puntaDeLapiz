@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+    
+    <%- include('./partials/head') %> 
 
-    <%- include('./partials/head') %>
+<body class="home">
 
-<body class="product home">
-
-    <%- include('./partials/header') %> 
-
-    <main class="detalle__producto">
-
-
-
-
-
-
-    <section class="container_productDetail">
+    <main >
+    
+      <section class="container_productDetail">
         <div class="left-column_productDetail">
             <img data-image="black" class="cart-products" src="/img/productsimg/<%= productos.imagen %> " alt="imagen producto">
 
@@ -46,38 +39,34 @@
              
          
                 <div class="cable-choose_productDetail">
-                  <button class="btn_prouctDetail1">Editar</button>
-                  <button class="btn_prouctDetail2">Eliminar</button>
-                  <button class="btn_prouctDetail3">Agregar Carrito</button>
+
+                  <% if (!(locals.user)) {%> 
+                    <a href="/cart"><button class="btn_prouctDetail3">Agregar Carrito</button></a>
+                    <% } else { %> 
+                  
+                  <button class="btn_prouctDetail1" onclick="location.href='/admin/edit/<%= productos.id %> '">Editar</button>
+                  
+                  <form action="/product/<%= productos.id %>?_method=DELETE" method="POST" style="display: inline-flex" id="eliminar-producto">
+                    <button type="submit" class="btn_prouctDetail2 ">Eliminar</button>
+                  </form>
+                  <% } %> 
                 </div>
              
+                
+
+
             </div>
          
             
           </div>
     
     </section>
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-      
+    <script src="/js/sweet.js"></script>
     </main>
-    
-   
+
+  
     <%- include('./partials/footer') %> 
-    
+
 </body>
+
 </html>

@@ -17,4 +17,21 @@ module.exports = {
             })
             .catch(error => console.log(error))
     
-    }}
+    },
+
+
+    destroy : (req, res) => {
+
+      db.Productos.destroy({
+        where : {
+            id : req.params.id
+        }
+    })
+    .then( () => res.redirect('/')
+    )
+    .catch(error => console.log(error)
+    ) 
+    
+  
+  }
+  }

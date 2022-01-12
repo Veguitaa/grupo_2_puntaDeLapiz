@@ -60,14 +60,17 @@ window.addEventListener('load', () =>{
         
         if (e.target.value === '') {
             nombre.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallnombre.innerHTML = "El campo nombre no puede estar vacio"
             validate.nombre = false
         }else if(e.target.value.length < 2){
             nombre.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallnombre.innerHTML = "El nombre debe contener mas de 2 letras"
             validate.nombre = false
         }else if(!regExLetras.test(e.target.value)){
             nombre.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallnombre.innerHTML = "El nombre debe contener solo letras"
             validate.nombre = false
         } else {
@@ -83,14 +86,17 @@ window.addEventListener('load', () =>{
         
         if (e.target.value === '') {
             apellido.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallapellido.innerHTML = "El campo apellido no puede estar vacio"
             validate.apellido = false
         }else if(e.target.value.length < 2){
             apellido.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallapellido.innerHTML = "El apellido debe contener mas de 2 letras"
             validate.apellido = false
         }else if(!regExLetras.test(e.target.value)){
             apellido.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallapellido.innerHTML = "El apellido debe contener solo letras"
             validate.apellido = false
         } else {
@@ -106,14 +112,17 @@ window.addEventListener('load', () =>{
         
         if (e.target.value === '') {
             email.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallemail.innerHTML = "El campo email no puede estar vacio"
             validate.email = false
         }else if(e.target.value.length < 2){
             email.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallemail.innerHTML = "El email debe contener mas de 2 letras"
             validate.email = false
         }else if(!regExEmail.test(e.target.value)){
             email.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallemail.innerHTML = 'Debes ingresar un email válido'
             validate.email = false
         } else {
@@ -129,10 +138,12 @@ window.addEventListener('load', () =>{
         
         if (e.target.value === '') {
             direccion.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smalldireccion.innerHTML = "El campo direccion no puede estar vacio"
             validate.direccion = false
         }else if(e.target.value.length < 2){
             direccion.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smalldireccion.innerHTML = "El direccion debe contener mas de 2 letras"
             validate.direccion = false
         } else {
@@ -148,10 +159,12 @@ window.addEventListener('load', () =>{
         
         if (e.target.value === '') {
             usuario.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallusuario.innerHTML = "El campo usuario no puede estar vacio"
             validate.usuario = false
         }else if(e.target.value.length < 3){
             usuario.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallusuario.innerHTML = "El usuario debe contener mas de 3 letras"
             validate.usuario = false
         } else {
@@ -167,14 +180,17 @@ window.addEventListener('load', () =>{
         
         if (e.target.value === '') {
             pass.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallpass.innerHTML = "La contraseña no puede estar vacia"
             validate.pass = false
         }else if(e.target.value.length < 8){
             pass.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallpass.innerHTML = "La contraseña debe contener un minimo de 8 caracteres"
             validate.pass = false
         }else if(!regExPass.test(pass.value)){
             pass.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallpass.innerHTML = 'La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
             validate.pass = false
         } else {
@@ -190,6 +206,7 @@ window.addEventListener('load', () =>{
     pass2.addEventListener('keyup', (e) =>{
         if(e.target.value !== pass.value){
             pass2.classList.add('noCheck')
+            nombre.style.border = '2px solid red'
             smallpass2.innerHTML = 'Las contraseñas no coinciden'
             validate.pass2 = false
         } else {
@@ -208,6 +225,7 @@ window.addEventListener('load', () =>{
         
         if (!regExImg.exec(img.value)) {
             img.classList.add('nocheck')
+            nombre.style.border = '2px solid red'
             smallimg.innerHTML = 'Solo se permiten imágenes con extensión jpg, jpeg, png, gif y webp'
             validate.img = false
         } else {
